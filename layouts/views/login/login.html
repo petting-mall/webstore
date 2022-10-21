@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./login.css">
+  <title>Login</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+
+      <img class="menu-icon" src="./img/Hamburger_icon.svg" alt="Ícone do menu">
+
+      <a href="#"><img class="logo-menu" src="./img/logo-petting-mall.png" alt="Logo da Petting Mall"></a>
+
+      <div class="search-container">
+        <span><img class="search-icon" src="./img/magnifying-glass.svg" alt="Ícone de lupa"></span>
+        <input class="search-box" type="search" name="search" placeholder="Digite o nome do produto">
+        <button class="search-button" type="submit">Buscar</button>
+      </div>
+
+      <div class="navbar-icons">
+        <a href="#"><img src="./img/login-icon.png" alt="Ícone de login"></a>
+        <a href="#"><img src="./img/cart-icon.png" alt="Ícone do carrinho de compras"></a>
+      </div>
+
+      <ul class="menu-list">
+        <li><a href="#">Alimentação</a></li>
+        <li><a href="#">Acessórios</a></li>
+        <li><a href="#">Brinquedos</a></li>
+        <li><a href="#">Cama & Mesa & Banho</a></li>
+        <li><a href="#">Cosméticos</a></li>
+        <li><a href="#">Roupas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="login-register">
+      <!-- Login -->
+      <div class="login">
+        <h2>Já sou cliente Petting Mall</h2>
+        <form action="#" method="post">
+          <label for="login-email">E-mail</label>
+          <input type="email" name="login-email" id="login-email" autofocus placeholder="email@email.com.br" required>
+          <label for="login-password">Senha</label>
+          <input type="password" name="login-password" id="login-password" placeholder="********" required>
+          <button type="submit">Entrar</button>
+          <a href="#">Esqueci minha senha</a>
+        </form>
+      </div>
+
+      <!-- Register -->
+      <div class="register">
+        <h2>Quero me cadastrar</h2>
+        <form action="#" method="post">
+          <label for="register-name">Nome</label>
+          <input type="text" name="register-name" id="register-name" placeholder="Digite seu nome" required>
+          <label for="register-email">E-mail</label>
+          <input type="email" name="register-email" id="register-email" placeholder="email@email.com.br" required>
+          <label for="register-password">Senha *</label>
+          <input type="password" name="register-password" id="register-password" placeholder="********" required>
+          <label for="register-confirmation">Repetir senha *</label>
+          <input type="password" name="register-confirmation" id="register-confirmation" placeholder="********" required>
+          <button type="submit">Cadastrar</button>
+  
+          <p>Ao clicar em "Cadastrar", eu confirmo que li os 
+            <a href="#">Termos e Condições</a> e <a href="#">Política de Privacidade</a>.
+          </p>
+
+        </form>
+        <aside>
+          <p>Política de senha segura *</p>
+          <p>A senha deve possuir, pelo menos:</p>
+          <ul>
+            <li>Um dígito numérico,</li>  
+            <li>Um caractere maiúsculo,</li>
+            <li>Um caractere minúsculo,</li>
+            <li>Um caractere especial (!@#$%^&*).</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="page-footer">
+
+    <ul class="page-footer-flex">
+      <li>Seções</li>
+      <li><a href="#">Alimentação</a></li>
+      <li><a href="#">Acessórios</a></li>
+      <li><a href="#">Brinquedos</a></li>
+      <li><a href="#">Cama, Mesa, Banho</a></li>
+      <li><a href="#">Cosméticos</a></li>
+      <li><a href="#">Roupas</a></li>
+    </ul>
+
+    <ul class="page-footer-flex">
+      <li>Dúvidas</li>
+      <li><a href="#">Atendimento</a></li>
+      <li><a href="#">Ajuda online</a></li>
+      <li><a href="#">Políticas da empresa</a></li>
+    </ul>
+
+    <div class="adopt page-footer-flex">
+      <a href="#">Adote um Pet</a>
+      <img src="./img/adote-um-pet.png" alt="Logo da campanha 'Adote um Pet'">
+    </div>
+
+    <ul class="page-footer-flex">
+      <li>Institucional</li>
+      <li><a href="#">Sobre a Petting Mall</a></li>
+      <li><a href="#">Marcas Parceiras</a></li>
+      <li><a href="#">Campanhas</a></li>
+    </ul>
+
+    <div class="social-media page-footer-flex">
+      <p>Redes Sociais</p>
+      <a href="#"><img src="./img/vector-facebook.svg" alt="Logo do Facebook"></a>
+      <a href="#"><img src="./img/vector-instagram.svg" alt="Logo do Instagram"></a>
+      <a href="#"><img src="./img/vector-whatsapp.svg" alt="Logo do WhatsApp"></a>
+      <div class="logo-footer">
+        <a href="#"><img src="./img/logo-petting-mall.png" alt="Logo da Petting Mall"></a>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <p>Copyright© 2022 PettingMall - Todos os direitos reservados</p>
+      <p>Made with <span class="heart">♥</span> by Grupo5-fs_tn17</p>
+    </div>
+
+  </footer>
+</body>
+
+</html>

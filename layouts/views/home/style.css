@@ -286,3 +286,39 @@ body {
     margin-top: -2rem;
   }
 }
+
+.destaques {
+  
+  height: 100%;
+  overflow-x: auto;
+  display: flex;
+  text-align: center;
+}
+
+.ofertas {
+  height: 40vh;
+  width: auto;
+  overflow-x: auto;
+  display: flex;
+  text-align: center;
+  margin-left: 25vw;
+  margin-right: 25vw;
+}
+
+.categorias {
+  display: grid;
+  grid-template-columns: 1lfr 1lfr 1lfr 1lfr;
+  box-sizing: border-box;
+  text-align: center;
+  alig;
+}
+
+.iconeCategorias {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 20vh;
+  height: 110px;
+  width: 110px;
+  text-align: center;
+
+}

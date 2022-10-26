@@ -295,14 +295,39 @@ body {
   text-align: center;
 }
 
+.imagemDestaque{
+  width: 95vw;
+  height: auto;
+}
+
 .ofertas {
-  height: 40vh;
-  width: auto;
+  width: 70vw;
+  height: auto;
   overflow-x: auto;
   display: flex;
   text-align: center;
-  margin-left: 25vw;
-  margin-right: 25vw;
+  margin-left: 15vw;
+  margin-right: 15vw;
+  border: 10px;
+  border-color: #081c15;
+  box-sizing: border-box;
+  box-shadow: #081c15;
+}
+
+.itemOferta {
+  width: auto;
+  height: 40vh;
+}
+
+::-webkit-scrollbar{
+  background-color: beige;
+  width: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #38baae;
+  border-radius: 25px;
 }
 
 .categorias {

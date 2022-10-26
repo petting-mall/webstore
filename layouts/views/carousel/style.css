@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+.carousel {
+  overflow: hidden;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.carousel-slides {
+  display: flex;
+  position: relative;
+  width: 400%;
+}
+
+.carousel-slides input[type="radio"] {
+  display: none;
+}
+
+.slide-imgs {
+  transition: 2s;
+  width: 25%;
+}
+
+.slide-imgs img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+.carousel-navigation {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 7%;
+  left: 6.25%;
+  width: 12.5%;
+}
+
+.carousel-btn {
+  background-color: transparent;
+  border: 3px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 5px;
+  transition: all 500ms;
+}
+
+.carousel-btn:not(:last-child) {
+  margin-right: 10%;
+}
+
+.carousel-btn:hover {
+  background-color: white;
+}
+
+#radio1:checked ~ .first-img {
+  margin-left: 0;
+}
+#radio2:checked ~ .first-img {
+  margin-left: -25%;
+}
+#radio3:checked ~ .first-img {
+  margin-left: -50%;
+}
+#radio4:checked ~ .first-img {
+  margin-left: -75%;
+}
+
+#radio1:checked ~ .carousel-navigation > .btn1 {
+  background-color: white;
+}
+#radio2:checked ~ .carousel-navigation > .btn2 {
+  background-color: white;
+}
+#radio3:checked ~ .carousel-navigation > .btn3 {
+  background-color: white;
+}
+#radio4:checked ~ .carousel-navigation > .btn4 {
+  background-color: white;
+}

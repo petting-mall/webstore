@@ -10,7 +10,9 @@
   --dark-color: #081c15;
 }
 
-
+html{
+   
+}
 
 body border{
     background-color: rgba(56, 186, 174,0.5);
@@ -36,7 +38,7 @@ body{
 body aside {
     height: 1500px;
     margin: 0.8rem;
-    max-width: 5rem;
+   
     padding: 1rem;
     border: 1px solid black;
     background-color: rgba(56, 186, 174,0.5);
@@ -57,7 +59,10 @@ main section {
   background-image:url(./fundo.jpeg);
 
   padding: 1rem;
-  /* border: 1px solid black; */ 
+  /* border: 1px solid black; */
+
+
+  
 
 }
 
@@ -137,6 +142,8 @@ body > aside > div > img {
 main nav {
     display: flex;
     justify-content: space-between;
+ 
+
     border-radius: 1rem;
 }
 
@@ -174,7 +181,7 @@ section .Tabela {
 }
 
 main section .pedidos > div{
-    /* width: 20%; */
+    width: 20%;
     display: flex;
     justify-content: center;
 }

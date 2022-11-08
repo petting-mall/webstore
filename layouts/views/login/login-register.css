@@ -1,12 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&display=swap');
 
 :root {
-  --primary-color: #38baae;
-  --secondary-color: #f6cd92;
+  /* Colors */
+  --primary-color: rgb(56, 186, 174);
+  --primary-opacity: rgba(56, 186, 174, 0.2);
+  --secondary-color: rgb(246, 205, 146);
+  --secondary-opacity: rgba(246, 205, 146, 0.2);
   --light-color: #fefaee;
   --text-color: #C4B691;
   --stronger-yellow: #ffb236;
-  --dark-color: #081c15;
+  --dark-color: #0b271d;
+  /* Sizes */
+  --categorias-min-size: 300px;
+  --max-screen-size: 1280px;
 }
 
 * {
@@ -15,17 +21,30 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background-color: rgba(56, 186, 174, 0.2);
+  background-image: url('./img/background-image.jpeg');
   font-family: 'Open Sans', sans-serif;
+}
+
+main {
   margin: 0 auto;
-  max-width: 1280px;
+  max-width: var(--max-screen-size);
 }
 
-::placeholder {
-  color: var(--text-color);
+::-webkit-scrollbar{
+  background-color: var(--light-color);
+  width: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
-
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 25px;
+}
 /* Page Menu */
 
 .navbar {
@@ -128,8 +147,7 @@ body {
 
 /* Login - Register */
 
-.login-register {
-  background-image: url('./img/background-image.jpeg');
+.login {
   color: var(--dark-color);
   display: grid;
   align-items: start;
@@ -138,67 +156,80 @@ body {
   padding: 3rem 0;
 }
 
-.login-register h2 {
+.login h2,
+.register {
   font-size: 1.25rem;
   padding: 2rem 0 1rem;
   text-align: center;
   width: 100%;
 }
 
-.login-register a {
+.login a,
+.register a {
   color: var(--primary-color);
   font-style: italic;
 }
 
-.login-register > div {
+.login > div,
+.register {
+  background-color: var(--primary-opacity);
+  border: 2px solid var(--primary-opacity);
+  border-radius: 5px;
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
   gap: 1rem;
+  padding-bottom: 2rem;
 }
 
-.login-register form {
+.login form,
+.register form {
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-start;
   margin-left: 10%;
 }
 
-.login-register form label {
+.login form label,
+.register form label {
+  font-size: 1.1rem;
   line-height: 1.25rem;
   margin-bottom: 0.25rem;
 }
 
-.login-register form input {
+.login form input,
+.register form input {
   border: 2px solid var(--primary-color);
   border-radius: 4px;
-  font-size: 1.1rem;
-  line-height: 1.75rem;
+  font-size: 1.25rem;
+  line-height: 2rem;
   margin-bottom: 1rem;
   outline: none;
   padding-left: 0.5rem;
   width: 90%;
 }
 
-.login-register button {
+.login button,
+.register button {
   background-color: var(--primary-color);
   border: 1px solid var(--primary-color);
   border-radius: 4px;
   color: var(--light-color);
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.1rem;
   margin: 1rem 0 0.5rem 0;
   padding: 0.4rem;
   transition: all 300ms ease;
   width: 90%;
 }
 
-.login-register button:hover {
+.login button:hover,
+.register button:hover {
   color: var(--secondary-color);
   filter: brightness(85%);
 }
 
-.login > form a {
+.login > div:first-child > form a {
   font-size: 0.9rem;
 }
 
@@ -218,7 +249,7 @@ body {
 }
 
 .register aside ul {
-  margin-left: 1.25rem;
+  list-style: none;
 }
 
 
@@ -364,7 +395,7 @@ body {
   }
 
   /* Login - Register */
-  .login-register {
+  .login {
     grid-template-columns: 1fr 1fr;
   }
 

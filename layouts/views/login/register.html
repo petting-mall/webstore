@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="login-register.css">
+  <title>Cadastro</title>
+</head>
+
+<body>
+
+  <main>
+
+    <!-- Register -->
+    <section class="register">
+      <h2>Realizar Cadastro</h2>
+      <form action="#" method="post">
+        <label for="register-name">Nome</label>
+        <input type="text" name="register-name" id="register-name" placeholder="Digite seu nome" required>
+        <label for="register-cpf">CPF (apenas os números)</label>
+        <input type="text" name="register-cpf" id="register-cpf" placeholder="Digite seu CPF" required>
+        <label for="register-email">E-mail</label>
+        <input type="email" name="register-email" id="register-email" placeholder="email@email.com.br" required>
+        <label for="register-password">Senha *</label>
+        <input type="password" name="register-password" id="register-password" placeholder="********" required>
+        <label for="register-confirmation">Repetir senha *</label>
+        <input type="password" name="register-confirmation" id="register-confirmation" placeholder="********" required>
+        <button type="submit">Cadastrar</button>
+
+        <p>Ao clicar em "Cadastrar", eu confirmo que li os 
+          <a href="#">Termos e Condições</a> e <a href="#">Política de Privacidade</a>.
+        </p>
+
+      </form>
+      <aside>
+        <p>Política de senha segura *</p>
+        <p>A senha deve possuir, pelo menos:</p>
+        <ul>
+          <li>Um dígito numérico,</li>  
+          <li>Um caractere maiúsculo,</li>
+          <li>Um caractere minúsculo,</li>
+          <li>Um caractere especial (!@#$%^&*).</li>
+        </ul>
+      </aside>
+    </section>
+
+  </main>
+
+</body>
+
+</html>

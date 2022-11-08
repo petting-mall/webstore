@@ -1,20 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&display=swap');
 
 :root {
-  --primary-color: #38baae;
+  /* Colors */
+  --primary-color: rgb(56, 186, 174);
   --primary-opacity: rgba(56, 186, 174, 0.2);
-  --secondary-color: #f6cd92;
-  --secondary-opacity: rgba(246, 205, 146, 0.3);
+  --secondary-color: rgb(246, 205, 146);
+  --secondary-opacity: rgba(246, 205, 146, 0.2);
   --light-color: #fefaee;
   --text-color: #C4B691;
   --stronger-yellow: #ffb236;
-  --dark-color: #081c15;
+  --dark-color: #0b271d;
+  /* Sizes */
+  --categorias-min-size: 300px;
+  --max-screen-size: 1280px;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -24,13 +32,19 @@ body {
 
 main {
   margin: 0 auto;
-  max-width: 1280px;
+  max-width: var(--max-screen-size);
 }
 
-::placeholder {
-  color: var(--text-color);
+::-webkit-scrollbar{
+  background-color: var(--light-color);
+  width: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
-
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 25px;
+}
 /* Page Menu */
 
 .navbar {
@@ -131,46 +145,114 @@ main {
   filter: brightness(85%);
 }
 
-/* Order confirmation */
-.order-confirmation {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 3rem 1rem;
+/* Login - Register */
+
+.login {
+  color: var(--dark-color);
+  display: grid;
+  align-items: start;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+  padding: 3rem 0;
 }
 
-.order-confirmation h1 {
-  font-size: 1.75rem;
-}
-
-.order-confirmation > img {
-  display: block;
-  margin: 2rem auto;
-  width: 4rem;
-}
-
-.numero-pedido {
-  margin: 1rem 0;
-}
-
-.numero-pedido h2 {
+.login h2,
+.register {
   font-size: 1.25rem;
+  padding: 2rem 0 1rem;
+  text-align: center;
+  width: 100%;
 }
 
-.numero-pedido p {
-  font-size: 0.85rem;
-  padding: 0.5rem 0;
-}
-
-.numero-pedido a {
+.login a,
+.register a {
   color: var(--primary-color);
-  font-size: 1rem;
   font-style: italic;
+}
+
+.login > div,
+.register {
+  background-color: var(--primary-opacity);
+  border: 2px solid var(--primary-opacity);
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 2rem;
+}
+
+.login form,
+.register form {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  margin-left: 10%;
+}
+
+.login form label,
+.register form label {
+  font-size: 1.1rem;
+  line-height: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.login form input,
+.register form input {
+  border: 2px solid var(--primary-color);
+  border-radius: 4px;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  margin-bottom: 1rem;
+  outline: none;
+  padding-left: 0.5rem;
+  width: 90%;
+}
+
+.login button,
+.register button {
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  color: var(--light-color);
+  cursor: pointer;
+  font-size: 1.1rem;
+  margin: 1rem 0 0.5rem 0;
+  padding: 0.4rem;
+  transition: all 300ms ease;
+  width: 90%;
+}
+
+.login button:hover,
+.register button:hover {
+  color: var(--secondary-color);
+  filter: brightness(85%);
+}
+
+.login > div:first-child > form a {
+  font-size: 0.9rem;
+}
+
+.register > form p {
+  font-size: 0.8rem;
+  width: 90%;
+}
+
+.register aside {
+  font-size: 0.9rem;
+  margin-left: 10%;
+  margin-top: 1rem;
+}
+
+.register aside p:first-child {
   font-weight: bold;
 }
 
-.dados-envio p:first-child {
-  font-weight: bold;
+.register aside ul {
+  list-style: none;
 }
+
+
 /* Page Footer */
 
 .page-footer {
@@ -312,11 +394,9 @@ main {
     width: 0.5rem;
   }
 
-  /* Order confirmation */
-  .order-confirmation {
-    background-color: var(--primary-opacity);
-    margin: 2rem auto;
-    padding: 2rem 4rem;
+  /* Login - Register */
+  .login {
+    grid-template-columns: 1fr 1fr;
   }
 
   /* Page Footer */

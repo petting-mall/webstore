@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&display=swap');
 
 :root {
-  --primary-color: #38baae;
+  --primary-color: rgb(56, 186, 174);
   --secondary-color: #f6cd92;
   --light-color: #fefaee;
   --text-color: #C4B691;
@@ -9,22 +9,233 @@
   --dark-color: #081c15;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+html{
+   display: flex;
+   justify-content: center;
 }
 
+
+
+a{
+    text-decoration: none;
+    color: #081c15;
+}
+
+* li {
+    list-style-type: none;
+}
 body {
-  background-color: rgba(56, 186, 174, 0.2);
-  font-family: 'Open Sans', sans-serif;
-  margin: 0 auto;
-  max-width: 1280px;
+    background-image: url(./fundo.jpeg);
+    font-family: 'Open Sans', sans-serif;
+    flex-flow:column;
+    display: flex;
+    width: 100%;
+    max-width: 1280px;
+    align-items: center;
+    justify-content: center;
+
+
+
+  }
+  
+
+body main aside {
+    max-width: 20%;
+    padding: 1rem;
+    background-color: rgba(56, 186, 174,0.5);
+    flex-grow: 0;
+    flex-shrink: 3;
+}
+.conta{
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  flex-grow: 3;
+
 }
 
-::placeholder {
-  color: var(--text-color);
+/* MAIN */
+
+
+ main {
+   
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    
+    /* border:1rem solid gray; */
+    /* border-color: rgb(190, 190, 190); */
 }
+
+main section {
+  background-image:url(./fundo.jpeg);
+
+
+}
+
+
+main section .Tabela{
+    background-color: rgba(56, 186, 174,0.5);
+    color:#081c15;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    
+    
+}
+
+body > main >  aside > div > img {
+   width: 200px;
+    height: 200px;
+      
+}
+
+.notificacoes > div {
+    display: flex;
+    justify-content: space-between;
+    color: rgb(0, 0, 0);
+    background-color:var(--secondary-color);
+    margin-bottom: 0.2rem;
+   
+}
+
+.creditos{
+    display: flex;
+    justify-content: space-between;
+    color: rgb(0, 0, 0);
+    background-color:var(--secondary-color);
+    height: 55px;
+    margin-bottom: 0.5rem;   
+}
+.navegacao ul {
+    padding: 2rem ;    
+    background-color:var(--secondary-color);
+    margin-bottom: 0.5rem;    
+}
+
+.navegacao ul li {
+    display: flex;
+    justify-content: center;
+
+}
+.total{
+    color: rgb(0, 0, 0);
+    display: flex; 
+    
+}
+
+.atendimento{
+    padding: 1px ;  
+    background-color:aqua;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main nav {
+    display: flex;
+    justify-content: space-around;    
+    align-items: center;
+    
+    border-top: none;
+       
+}
+main nav h3{
+  
+  font-size: 27px;
+  color:#081c15;
+}
+
+main section .Tabela .tabela-cabeca {
+    display: flex;
+    font-size: large;
+    justify-content: space-between;
+    padding: 2rem;
+   
+}
+nav select {
+   width: 150px;
+   height: 50px;
+   font-size: 17px;
+   background-color:  #f6cd92;
+
+}
+
+
+main section .Texto{
+    background-color: rgba(56, 186, 174,0.5 );   
+    padding: 3rem;    
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    overflow: hidden;
+    color:#081c15;
+    /* <DUVIDA> */
+    border: 15px solid rgba(56, 186, 174,0.0 );
+        border-radius: 20px;
+    border-bottom: none;
+    
+  }
+
+
+main section .pedidos{
+    display: flex;  
+    justify-content: space-around;
+    padding: 3rem;
+}
+
+section .Tabela header{
+  display: flex;
+  flex-direction: column;
+  font-size: 17px;
+  padding: 2rem;
+  justify-content: space-between;
+}
+.Tabela {
+
+  overflow:auto;
+  overflow-x: hidden;
+}
+
+main section .pedidos > div{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+main section header select{
+  width:7rem;
+  height:3rem;
+}
+
+@media (min-width:1505px){
+body main conta{    
+   margin: 0 auto;
+}
+}
+@media (min-width:1000px){
+body main conta{    
+   margin: 0 auto;
+}
+}
+
+
+header{
+ width: 100%;
+ box-sizing: border-box;
+}
+footer{
+  width: 100%;
+}
+
+
+
+
+
+
+
 
 /* Page Menu */
 
@@ -35,7 +246,7 @@ body {
   align-items: center;
   background-color: var(--primary-color);
   padding: 0.5rem 1rem;
-  width: 100%;
+
 }
 
 .navbar a {
@@ -124,101 +335,6 @@ body {
 .search-button:hover {
   color: var(--secondary-color);
   filter: brightness(85%);
-}
-
-/* Login - Register */
-
-.login-register {
-  background-image: url('./img/background-image.jpeg');
-  color: var(--dark-color);
-  display: grid;
-  align-items: start;
-  grid-template-columns: 1fr;
-  grid-gap: 2rem;
-  padding: 3rem 0;
-}
-
-.login-register h2 {
-  font-size: 1.25rem;
-  padding: 2rem 0 1rem;
-  text-align: center;
-  width: 100%;
-}
-
-.login-register a {
-  color: var(--primary-color);
-  font-style: italic;
-}
-
-.login-register > div {
-  display: grid;
-  grid-template-columns: 1fr;
-  align-items: center;
-  gap: 1rem;
-}
-
-.login-register form {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: flex-start;
-  margin-left: 10%;
-}
-
-.login-register form label {
-  line-height: 1.25rem;
-  margin-bottom: 0.25rem;
-}
-
-.login-register form input {
-  border: 2px solid var(--primary-color);
-  border-radius: 4px;
-  font-size: 1.1rem;
-  line-height: 1.75rem;
-  margin-bottom: 1rem;
-  outline: none;
-  padding-left: 0.5rem;
-  width: 90%;
-}
-
-.login-register button {
-  background-color: var(--primary-color);
-  border: 1px solid var(--primary-color);
-  border-radius: 4px;
-  color: var(--light-color);
-  cursor: pointer;
-  font-size: 1rem;
-  margin: 1rem 0 0.5rem 0;
-  padding: 0.4rem;
-  transition: all 300ms ease;
-  width: 90%;
-}
-
-.login-register button:hover {
-  color: var(--secondary-color);
-  filter: brightness(85%);
-}
-
-.login > form a {
-  font-size: 0.9rem;
-}
-
-.register > form p {
-  font-size: 0.8rem;
-  width: 90%;
-}
-
-.register aside {
-  font-size: 0.9rem;
-  margin-left: 10%;
-  margin-top: 1rem;
-}
-
-.register aside p:first-child {
-  font-weight: bold;
-}
-
-.register aside ul {
-  margin-left: 1.25rem;
 }
 
 
@@ -361,11 +477,6 @@ body {
   .menu-list a:hover::after {
     left: 46%;
     width: 0.5rem;
-  }
-
-  /* Login - Register */
-  .login-register {
-    grid-template-columns: 1fr 1fr;
   }
 
   /* Page Footer */

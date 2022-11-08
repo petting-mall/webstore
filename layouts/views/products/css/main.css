@@ -5,7 +5,6 @@
   --secondary-color: #f6cd92;
   --light-color: #fefaee;
   --text-color: #C4B691;
-
   --stronger-yellow: #ffb236;
   --dark-color: #081c15;
 }
@@ -17,15 +16,15 @@
 }
 
 body {
-  background-image: url(/img/background-page.jpeg);
-  background-size: auto;
-  background-repeat: repeat;
-  
+  background-image: url('../img/background-page.jpeg');
   font-family: 'Open Sans', sans-serif;
   margin: 0 auto;
   max-width: 1280px;
 }
 
+::placeholder {
+  color: var(--text-color);
+}
 
 
 /* Page Menu */
@@ -128,7 +127,355 @@ body {
   filter: brightness(85%);
 }
 
+.buy-button {
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  color: var(--light-color);
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 1rem 0 0.5rem 0;
+  padding: 0.4rem;
+  transition: all 300ms ease;
+  width: 90%;
+}
 
+.buy-button:hover {
+  color: var(--secondary-color);
+  filter: brightness(85%);
+}
+/* Page Product */
+
+/*Grid da foto e preço*/
+.grid-foto-preco{
+  
+  color: var(--dark-color);
+  display: flexbox;
+  align-items: start;
+  padding: 3rem 0;
+  margin-left: 50px;
+}
+.fotoProduto {
+  width:50%;
+  max-height: 450px;
+  overflow: hidden;
+}
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 75%;
+  width: 30px;
+  margin-left: 15px;
+  margin-right: 50%;
+  margin-top: -50px;
+  color:#38BAAE;
+  font-weight: bold;
+  font-size: 30px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Three columns side by side */
+.column {
+  float: left;
+  width: 151.5px;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+.nomeProduto{
+  position: absolute;
+  width: 393.07px;
+  height: 92px;
+  left: 53%;
+  top: 135px;
+  
+  
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  align-items: center;
+  text-align: center;
+
+  color: #38BAAE;    
+}
+.nomeProduto p{
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 27px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #444343;
+}
+
+/*Preço */
+.precoProduto{
+position: absolute;
+width: 393.07px;
+height: 92px;
+left: 53%;
+top: 170px;
+
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 27px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #444343;
+}
+/* Título botão Tamanho Selecionado */
+.titleButtonSelected{
+position: absolute;
+width: 81px;
+height: 23px;
+left: 53%;
+top: 273px;
+
+font-family: 'Open Sans';
+font-style:normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 16px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #888888;
+}
+
+/* Seletor Tamanho */
+.espaco-botoes-tamanho{
+  position:absolute;
+  left:53%;
+  top: 280px;
+  margin-left: 15px;
+  display:flex;
+  flex-direction: row;
+}
+.productSizeButton{
+  position: relative;
+  width: 46px;
+  height: 46px;
+  margin-left: 20px;
+   
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  align-items: center;
+  text-align: center;
+  
+  color: #ffffff;
+  
+  border: 3px solid #38BAAE;
+}
+.productSizeButton:after{
+  color:#38BAAE;
+  border: 3px solid #ffb236;
+  background-color: #C4B691;
+
+}
+
+.buttonQuantities{
+  position: absolute;
+  width: 70px;
+  height: auto;
+  left: 53%;
+  top: 356px;
+
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 20px;
+  
+  align-items: center;
+  text-align: center;
+  
+
+  color: #38BAAE;
+  border: 3px solid #38BAAE;
+
+}
+/* Botão Comprar*/
+.buttonBuy{
+  position: absolute;
+  width: 280px;
+  height: 46px;
+  margin-left: 20px;
+  left: 51%;
+  top:430px;
+
+
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 1000px;
+font-size: 28px;
+text-align: center;
+
+color: #FFCA86;
+background-color: #38BAAE;
+}
+
+/*Caixa Calcula Frete*/
+
+.calculaFrete{
+  position: absolute;
+  width: 193px;
+  height: 54px;
+  left: 53%;
+  top: 513px;
+  
+  
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  color: rgba(136, 136, 136, 0.58);
+  background: rgba(217, 217, 217, 0.01);
+  border: 2px solid #38BAAE;
+  }
+.paragraph{ 
+  
+  box-sizing: border-box;
+  height: 190px;
+  left: 114px;
+  margin-top: 20px;
+  margin: 10px;
+  
+
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  align-items: center;
+
+  color: #888888;
+
+  background: #EFE4C8;
+  border: 2px solid #38BAAE;
+}
+.sitePath{
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 22px;
+  align-items: center;
+  color: #888888;  
+
+  background: #EFE4C8;
+  border: 2px solid #38BAAE;
+}
+button.slick-prev {
+  font-size: 0px;
+  border: none;
+  width: 25px;
+  height: 51px;
+  z-index: 9;
+  background-color: transparent;
+  position: absolute;
+  background-image: url(../img/anterior.png);
+  top: 35%;
+  left: 14%;
+}
+button.slick-next {
+  font-size: 0px;
+  border: none;
+  width: 25px;
+  height: 151px;
+  z-index: 9;
+  background-color: transparent;
+  position: absolute;
+  background-image: url(../img/proximo.jpg);
+  top: 35%;
+  right: 19%;
+}
+.slick-list {
+  width: 100%!important;
+}
+.slick-initialized {
+  overflow: hidden;
+}
+.slick-dots li button {
+  font-size: 0px;
+  border: 5px solid #ffffff;
+  width: 26px;
+  height: 26px;
+  background: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+
+}
+.slick-dots {
+  margin: 0 auto;
+  width: 50%;
+  position: absolute;
+  left: 50%;
+  top: 600px;
+}
+
+li.slick-active button {
+  background: #00bac6;
+}
+
+.slick-dots li {
+  padding-left: 10px;
+  display: inline-block;
+}
 /* Page Footer */
 
 .page-footer {
@@ -270,317 +617,7 @@ body {
     width: 0.5rem;
   }
 
-/* Page Product */
 
-.fotoProduto {
-    width: 600px;
-    height: 452px;
-    right: 45%;
-    margin-left: 50px;
-}
-
-.tituloFotoProduto{
-    position: absolute;
-    width: 393.07px;
-    height: 92px;
-    left: 53%;
-    top: 135px;
-    
-    
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 44px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-
-    color: #38BAAE;    
-}
-
-/*Preço */
-.precoProduto{
-position: absolute;
-width: 393.07px;
-height: 92px;
-left: 53%;
-top: 170px;
-
-font-family: 'Open Sans';
-font-style: normal;
-font-weight: 600;
-font-size: 20px;
-line-height: 27px;
-display: flex;
-align-items: center;
-text-align: center;
-
-color: #444343;
-}
-/* Título botão Tamanho Selecionado */
-.titleButtonSelected{
-position: absolute;
-width: 81px;
-height: 23px;
-left: 53%;
-top: 273px;
-
-font-family: 'Open Sans';
-font-style: normal;
-font-weight: 600;
-font-size: 12px;
-line-height: 16px;
-display: flex;
-align-items: center;
-text-align: center;
-
-color: #888888;
-}
-/* Seletor PP */
-.productSizeButtonPp{
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    left: 53%;
-    top: 302px;
-    
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 22px;
-    align-items: center;
-    text-align: center;
-
-    color: #38BAAE;
-
-    border: 3px solid #38BAAE;
-}
-/* Seletor P */
-.productSizeButtonP{
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    left: 56%;
-    top: 302px;
-    
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 22px;
-    align-items: center;
-    text-align: center;
-    
-    color: #38BAAE;
-    
-    border: 3px solid #38BAAE;
-    }
-/* Seletor M */
-.productSizeButtonM{
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    left: 59%;
-    top: 302px;
-    
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 22px;
-    align-items: center;
-    text-align: center;
-    
-    color: #38BAAE;
-    
-    border: 3px solid #38BAAE;
-    }
-    /* Seletor G */
-.productSizeButtonG{
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    left: 62%;
-    top: 302px;
-    
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 22px;
-    align-items: center;
-    text-align: center;
-    
-    color: #38BAAE;
-    
-    border: 3px solid #38BAAE;
-    }
-    /* Seletor GG */
-.productSizeButtonGG{
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    left: 65%;
-    top: 302px;
-    
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 22px;
-    align-items: center;
-    text-align: center;
-    
-    color: #38BAAE;
-    
-    border: 3px solid #38BAAE;
-}
-.buttonQuantities{
-    position: absolute;
-    width: 70px;
-    height: auto;
-    left: 53%;
-    top: 356px;
-
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 18px;
-    letter-spacing: 20px;
-    
-    align-items: center;
-    text-align: center;
-    
-
-    color: #38BAAE;
-    border: 3px solid #38BAAE;
-
-}
-/* Botão Comprar*/
-.buttonBuy{
-position: absolute;
-width: 329px;
-height: auto;
-left: 53%;
-top: 420px;
-
-font-family: 'Open Sans';
-font-style: normal;
-font-weight: 700;
-font-size: 28px;
-text-align: center;
-
-color: #FFCA86;
-background-color: #38BAAE;
-}
-
-/*Caixa Calcula Frete*/
-
-.calculaFrete{
-    position: absolute;
-    width: 193px;
-    height: 54px;
-    left: 53%;
-    top: 513px;
-    
-    
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 19px;
-    display: flex;
-    align-items: center;
-    color: rgba(136, 136, 136, 0.58);
-    background: rgba(217, 217, 217, 0.01);
-    border: 2px solid #38BAAE;
-    }
-.paragraph{ 
-       
-    max-width: 1280px;
-    height: 190px;
-    left: 114px;
-    margin-top: 20px;
-    margin: 10px;
-    
-
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 22px;
-    align-items: center;
-
-    color: #888888;
-
-    background: #EFE4C8;
-    border: 2px solid #38BAAE;
-}
-.sitePath{
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 13px;
-    line-height: 22px;
-    align-items: center;
-    color: #888888;  
-
-    background: #EFE4C8;
-    border: 2px solid #38BAAE;
-}
-  button.slick-prev {
-    font-size: 0px;
-    border: none;
-    width: 25px;
-    height: 51px;
-    z-index: 9;
-    background-color: transparent;
-    position: absolute;
-    background-image: url(../img/anterior.png);
-    top: 35%;
-    left: 14%;
-}
-button.slick-next {
-    font-size: 0px;
-    border: none;
-    width: 25px;
-    height: 151px;
-    z-index: 9;
-    background-color: transparent;
-    position: absolute;
-    background-image: url(../img/proximo.jpg);
-    top: 35%;
-    right: 19%;
-}
-.slick-list {
-    width: 100%!important;
-}
-.slick-initialized {
-    overflow: hidden;
-}
-.slick-dots li button {
-    font-size: 0px;
-    border: 5px solid #ffffff;
-    width: 26px;
-    height: 26px;
-    background: transparent;
-    border-radius: 50%;
-    cursor: pointer;
-
-}
-.slick-dots {
-    margin: 0 auto;
-    width: 50%;
-    position: absolute;
-    left: 50%;
-    top: 600px;
-}
-
-li.slick-active button {
-    background: #00bac6;
-}
-
-.slick-dots li {
-    padding-left: 10px;
-    display: inline-block;
-}
 
   /* Page Footer */
   .page-footer {

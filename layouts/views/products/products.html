@@ -1,0 +1,232 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="./css/slick.css" />
+    <title>Pagina Produto</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+    
+          <img class="menu-icon" src="./img/Hamburger_icon.svg" alt="Ícone do menu">
+    
+          <a href="#"><img class="logo-menu" src="./img/logo-petting-mall.png" alt="Logo da Petting Mall"></a>
+    
+          <div class="search-container">
+            <span><img class="search-icon" src="./img/magnifying-glass.svg" alt="Ícone de lupa"></span>
+            <input class="search-box" type="search" name="search" placeholder="Digite o nome do produto">
+            <button class="search-button" type="submit">Buscar</button>
+          </div>
+    
+          <div class="navbar-icons">
+            <a href="#"><img src="./img/login-icon.png" alt="Ícone de login"></a>
+            <a href="#"><img src="./img/cart-icon.png" alt="Ícone do carrinho de compras"></a>
+          </div>
+    
+          <ul class="menu-list">
+            <li><a href="#">Alimentação</a></li>
+            <li><a href="#">Acessórios</a></li>
+            <li><a href="#">Brinquedos</a></li>
+            <li><a href="#">Cama & Mesa & Banho</a></li>
+            <li><a href="#">Cosméticos</a></li>
+            <li><a href="#">Roupas</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      
+      <main>
+        <div class="sitePath">
+            <p>Inicio > Acessórios > Coleiras</p>
+        </div>
+        <section>
+          
+          <!--carrocel com as fotos ampliadas do produto-->
+          <div class="grid-foto-preco">
+            <div class="fotoProduto">
+              <div class="mySlides">
+                <img src="./img/produto1.jpg" style="width:100%">
+              </div>
+
+              <div class="mySlides">
+                <img src="./img/produto2.webp" style="width:100%">
+              </div>
+
+              <div class="mySlides">
+                <img src="./img/produto3.webp" style="width:100%">
+              </div>
+
+              <div class="mySlides">
+                <img src="./img/produto1.jpg" style="width:100%">
+              </div>
+
+              <!-- Next and previous buttons -->
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+          
+          <!-- Thumbnail images -->
+          <div class="row">
+            <div class="column">
+              <img class="demo cursor" src="./img/produto1.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+            </div>
+            
+            <div class="column">
+              <img class="demo cursor" src="./img/produto2.webp" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+            </div>
+    
+            <div class="column">
+              <img class="demo cursor" src="./img/produto3.webp" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+            </div>
+    
+            <div class="column">
+              <img class="demo cursor" src="./img/produto1.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+            </div>
+          </div>
+        </div> 
+      </section>      
+          
+      <section>
+        <div class="nomeProduto">
+          <h2>Coleira Paris</h2>
+          <p> 60,00 ou 6x de R$ 10,00 sem juros</p>
+        </div>
+        
+        <div class="titleButtonSelected">
+          <p>Tamanho: M</p>
+        </div>
+        
+        <div class="espaco-botoes-tamanho">
+          <div class="productSizeButton buy-button">
+            <p>PP</p>
+          </div>
+            
+          <div class="productSizeButton buy-button">
+            <p>P</p>
+          </div>
+          
+          <div class="productSizeButton buy-button">
+            <p>M</p>
+          </div>
+          
+          <div class="productSizeButton buy-button">
+            <p>G</p>
+          </div>
+          
+          <div class="productSizeButton buy-button">
+            <p>GG</p>
+          </div>
+        </div> 
+        
+        <div class="buttonQuantities">
+          <p>-1+</p>
+        </div>
+          
+        <div class="buy-button buttonBuy">
+          <p>COMPRAR</p>
+        </div>       
+          
+        <div class="calculaFrete" >
+          <p>Calcular Frete:</p>
+        </div>
+          
+      </section>  
+
+          <div class="paragraph">
+            <h3>Descrição</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed justo arcu,
+               semper egestas malesuada quis, commodo sit amet mi. Nullam lectus magna,
+               aliquam sed consequat at, faucibus sed nisl. Donec aliquam nunc nec justo 
+               lobortis mollis. Nulla non nunc sed turpis ultricies consequat. Curabitur
+               sodales odio vel commodo vestibulum. Vivamus quis eros lobortis, varius
+               Cras ultricies turpis magna, sed mattis mi dignissim id. Nulla vitae nisl
+               et enim ullamcorper feugiat non quis neque. Pellentesque ultricies eget magna
+               sed pharetra. Nam a ornare nisl. Donec consequat molestie libero, et congue 
+               nisl interdum at. Suspendisse id ante libero.</p>
+          </div>
+          <div class="paragraph">
+            <h3>Ficha Técnica</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed justo arcu,
+               semper egestas malesuada quis, commodo sit amet mi. Nullam lectus magna,
+               aliquam sed consequat at, faucibus sed nisl. Donec aliquam nunc nec justo 
+               lobortis mollis. Nulla non nunc sed turpis ultricies consequat. Curabitur
+               sodales odio vel commodo vestibulum. Vivamus quis eros lobortis, varius
+               Cras ultricies turpis magna, sed mattis mi dignissim id. Nulla vitae nisl
+               et enim ullamcorper feugiat non quis neque. Pellentesque ultricies eget magna
+               sed pharetra. Nam a ornare nisl. Donec consequat molestie libero, et congue 
+               nisl interdum at. Suspendisse id ante libero.</p>  
+          </div>
+               <div class="paragraph">
+                <h3>Avaliações</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed justo arcu,
+                   semper egestas malesuada quis, commodo sit amet mi. Nullam lectus magna,
+                   aliquam sed consequat at, faucibus sed nisl. Donec aliquam nunc nec justo 
+                   lobortis mollis. Nulla non nunc sed turpis ultricies consequat. Curabitur
+                   sodales odio vel commodo vestibulum. Vivamus quis eros lobortis, varius
+                   Cras ultricies turpis magna, sed mattis mi dignissim id. Nulla vitae nisl
+                   et enim ullamcorper feugiat non quis neque. Pellentesque ultricies eget magna
+                   sed pharetra. Nam a ornare nisl. Donec consequat molestie libero, et congue 
+                   nisl interdum at. Suspendisse id ante libero.</p>
+                </div>
+                
+            </main>
+          
+      
+        <footer class="page-footer">
+    
+        <ul class="page-footer-flex">
+          <li>Seções</li>
+          <li><a href="#">Alimentação</a></li>
+          <li><a href="#">Acessórios</a></li>
+          <li><a href="#">Brinquedos</a></li>
+          <li><a href="#">Cama, Mesa, Banho</a></li>
+          <li><a href="#">Cosméticos</a></li>
+          <li><a href="#">Roupas</a></li>
+        </ul>
+    
+        <ul class="page-footer-flex">
+          <li>Dúvidas</li>
+          <li><a href="#">Atendimento</a></li>
+          <li><a href="#">Ajuda online</a></li>
+          <li><a href="#">Políticas da empresa</a></li>
+        </ul>
+    
+        <div class="adopt page-footer-flex">
+          <a href="#">Adote um Pet</a>
+          <img src="./img/adote-um-pet.png" alt="Logo da campanha 'Adote um Pet'">
+        </div>
+    
+        <ul class="page-footer-flex">
+          <li>Institucional</li>
+          <li><a href="#">Sobre a Petting Mall</a></li>
+          <li><a href="#">Marcas Parceiras</a></li>
+          <li><a href="#">Campanhas</a></li>
+        </ul>
+    
+        <div class="social-media page-footer-flex">
+          <p>Redes Sociais</p>
+          <a href="#"><img src="./img/vector-facebook.svg" alt="Logo do Facebook"></a>
+          <a href="#"><img src="./img/vector-instagram.svg" alt="Logo do Instagram"></a>
+          <a href="#"><img src="./img/vector-whatsapp.svg" alt="Logo do WhatsApp"></a>
+          <div class="logo-footer">
+            <a href="#"><img src="./img/logo-petting-mall.png" alt="Logo da Petting Mall"></a>
+          </div>
+        </div>
+    
+        <div class="copyright">
+          <p>Copyright© 2022 PettingMall - Todos os direitos reservados</p>
+          <p>Made with <span class="heart">♥</span> by Grupo5-fs_tn17</p>
+        </div>
+    
+      </footer>
+        
+
+<script type="text/javascript" src="./js/jquery.js"></script>
+<script type="text/javascript" src="./js/jquery-migrate.js"></script>
+<script type="text/javascript" src="./js/slick.min.js"></script>
+<script type="text/javascript" src="./js/main.js"></script>
+</body>
+
+</html>

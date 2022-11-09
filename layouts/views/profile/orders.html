@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./css/order.css" />
+  <title>Pedidos</title>
+</head>
+
+<body>
+
+  <main>
+
+    <section class="orders">
+      <h1>Meus Pedidos</h1>
+      <header class="order-header">
+        <p>Pedidos realizados</p>
+        <div>
+          <label>Período: </label>
+          <select name="order-period" id="order-period">
+            <option value="3m" selected>Últimos 3 meses</option>
+            <option value="6m">Últimos 6 meses</option>
+            <option value="12m">Últimos 12 meses</option>
+            <option value="2a">Últimos 2 anos</option>
+          </select>
+        </div>
+      </header>
+
+      <div class="order-main">
+        <ul class="order-title">
+          <li>Pedido</li>
+          <li>Data</li>
+          <li>Status</li>
+          <li>NF-e</li>
+        </ul>
+        <ul class="order-data">
+          <li>1980</li>
+          <li>05/11/2022</li>
+          <li>Comprado</li>
+          <li><a href="#">PDF</a></li>
+        </ul>
+        <button type="button">Ver Detalhes</button>
+      </div>
+
+      <div class="order-main">
+        <ul class="order-title">
+          <li>Pedido</li>
+          <li>Data</li>
+          <li>Status</li>
+          <li>NF-e</li>
+        </ul>
+        <ul class="order-data">
+          <li>1810</li>
+          <li>15/10/2022</li>
+          <li>Entregue</li>
+          <li><a href="#">PDF</a></li>
+        </ul>
+        <button type="button">Ver Detalhes</button>
+      </div>
+    </section>
+
+  </main>
+  
+</body>
+
+</html>

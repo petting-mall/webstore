@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./css/style.css" />
+  <title>Petting Mall</title>
+</head>
+
+<body>
+  <header>
+    <div class="sale-header">
+      <img src="./img/logo-petting-mall.png" alt="Logo da Petting Mall">
+    </div>
+  </header>
+
+  <main>
+
+    <section class="cart">
+      <h1>Meu Carrinho</h1>
+      <div class="cart-container">
+        <div class="cart-products">
+          <div class="cart-title">
+            <h2>Produtos</h2>
+            <h2>Qtd.</h2>
+            <h2>Preço</h2>
+          </div>
+          <div class="cart-products-info">
+            <img src="./img/cart-product1.webp" alt="Produto no carrinho 1">
+            <div class="cart-product-description">
+              <p>Cama Clássica Flicks Cáqui Pequena Cáqui Pequena Cáqui Pequena Cáqui Pequena Cáqui Pequena</p>
+              <p>Marca: Flicks</p>
+              <p>Em estoque</p>
+            </div>
+          </div>
+          <div class="cart-product-quantity">
+            <div class="cart-add-remove">
+              <button type="button" id="cart-minus-button">−</button>
+              <span>1</span>
+              <button type="button" id="cart-plus-button">+</button>
+            </div>
+            <a class="cart-remove-item" href="#"><span>Remover</span></a>
+          </div>
+          <div class="cart-product-price">
+            <p>R$ 179,90</p>
+          </div>
+        </div>
+
+        <div class="cart-shipping">
+          <h2>Frete e prazo</h2>
+          <input type="tel" name="cart-cep" id="cart-cep" placeholder="CEP">
+          <button type="submit">Buscar</button>
+        </div>
+
+        <aside class="cart-summary">
+          <h2>Resumo do pedido</h2>
+          <ul>
+            <li>frete</li>
+            <li>produtos</li>
+            <li id="coupon">cupom</li>
+            <li>total</li>
+          </ul>
+          <ul class="cart-price">
+            <li>R$ 5,90</li>
+            <li>R$ 179,90</li>
+            <li id="coupon-discount">inserir</li>
+            <li>R$ 185,80</li>
+          </ul>
+          <div class="goto-payment">
+            <button type="button">Finalizar a compra</button>
+          </div>
+          <a href="#">Continuar comprando</a>
+        </aside>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="sale-footer">
+    <div class="copyright">
+      <p>Copyright© 2022 PettingMall - Todos os direitos reservados</p>
+      <p>Made with <span class="heart">♥</span> by Grupo5-fs_tn17</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>

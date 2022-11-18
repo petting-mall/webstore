@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="login-register.css">
+  <script src="./login-register.js" defer></script>
   <title>Cadastro</title>
 </head>
 
@@ -15,35 +16,120 @@
 
     <!-- Register -->
     <section class="register">
-      <h2>Realizar Cadastro</h2>
-      <form action="#" method="post">
-        <label for="register-name">Nome</label>
-        <input type="text" name="register-name" id="register-name" placeholder="Digite seu nome" required>
-        <label for="register-cpf">CPF (apenas os números)</label>
-        <input type="text" name="register-cpf" id="register-cpf" placeholder="Digite seu CPF" required>
-        <label for="register-email">E-mail</label>
-        <input type="email" name="register-email" id="register-email" placeholder="email@email.com.br" required>
-        <label for="register-password">Senha *</label>
-        <input type="password" name="register-password" id="register-password" placeholder="********" required>
-        <label for="register-confirmation">Repetir senha *</label>
-        <input type="password" name="register-confirmation" id="register-confirmation" placeholder="********" required>
-        <button type="submit">Cadastrar</button>
+      <h1>Realizar Cadastro</h1>
+      <div class="form-container">
+        <form action="#" method="post">
+          <div class="form-group form-email">
+            <label for="register-email">E-mail</label>
+            <input type="email" name="register-email" id="register-email" value="teste@email.com" disabled>
+          </div>
+          <div class="form-group">
+            <label class="form-group-label">Tipo de conta</label>
+            <label for="register-type-pf">
+              <input type="radio" name="account-type" id="register-type-pf" value="type-pf">
+              <span class="register-radio-span">Pessoa Física</span>
+            </label>
+            <label for="register-type-pj">
+              <input type="radio" name="account-type" id="register-type-pj" value="type-pj">
+              <span class="register-radio-span">Pessoa Jurídica</span>
+            </label>
+          </div>
+          
+          <h3 class="form-item-pj">Dados da empresa</h3>
+          <div class="form-group form-item-pj">
+            <label class="form-group-label" for="register-cnpj">CNPJ (apenas números)</label>
+            <input type="text" name="register-cnpj" id="register-cnpj" placeholder="CNPJ" required>
+          </div>
+          <div class="form-group form-item-pj">
+            <label class="form-group-label" for="register-company">Razão Social</label>
+            <input type="text" name="register-company" id="register-company" placeholder="Razão social da empresa" required>
+          </div>
+          <div class="form-group form-item-pj">
+            <label class="form-group-label" for="register-ie">Inscrição Estadual</label>
+            <input type="text" name="register-ie" id="register-ie" placeholder="Insc. Estadual" required>
+            <input type="checkbox" name="register-ie-na" id="register-ie-na" checked>
+            <label for="register-ie-na">Isento</label>
+          </div>
+  
+          <h3>Dados Pessoais</h3>
+          <div class="form-group form-item-pf">
+            <label class="form-group-label" for="register-cpf">CPF (apenas números)</label>
+            <input type="text" name="register-cpf" id="register-cpf" placeholder="Inserir CPF" required>
+          </div>
+          <div class="form-group">
+            <label class="form-group-label" for="register-name">Nome Completo</label>
+            <input type="text" name="register-name" id="register-name" placeholder="Inserir nome completo" required>
+          </div>
+  
+          <h3>Endereço</h3>
+          <div class="form-group">
+            <label class="form-group-label" for="register-cep">CEP (apenas números)</label>
+            <input type="text" name="register-cep" id="register-cep" placeholder="Inserir CEP" required>
+            <button id="busca-cep">Buscar</button>
+          </div>
+          <div class="form-group form-address">
+            <label class="form-group-label" for="register-address">Endereço</label>
+            <input type="text" name="register-address" id="register-address" placeholder="Inserir endereço">
+          </div>
+          <div class="form-group form-address">
+            <label class="form-group-label" for="register-address-number">Número</label>
+            <input type="text" name="register-address-number" id="register-address-number" placeholder="Inserir número ou S/N">
+          </div>
+          <div class="form-group form-address">
+            <label class="form-group-label" for="register-address-extra">Complemento</label>
+            <input type="text" name="register-address-extra" id="register-address-extra" placeholder="Inserir complemento">
+          </div>
+          <div class="form-group form-address">
+            <label class="form-group-label" for="register-address-bairro">Bairro</label>
+            <input type="text" name="register-address-bairro" id="register-address-bairro" placeholder="Inserir Bairro">
+          </div>
+          <div class="form-group form-address">
+            <label class="form-group-label" for="register-address-city">Cidade</label>
+            <input type="text" name="register-address-city" id="register-address-city" placeholder="Inserir Cidade">
+          </div>
+          <div class="form-group form-address">
+            <label class="form-group-label" for="register-address-uf">Estado</label>
+            <input type="text" name="register-address-uf" id="register-address-uf" placeholder="Inserir Estado">
+          </div>
+          <div class="form-group form-address">
+            <label class="form-group-label" for="register-address-ref">Ponto de referência</label>
+            <input type="text" name="register-address-ref" id="register-address-ref" placeholder="Inserir ponto de referência">
+          </div>
+          <div class="form-group form-address">
+            <label class="form-group-label" for="register-phone">Telefone celular</label>
+            <input type="text" name="register-phone" id="register-phone" placeholder="Inserir nº de telefone">
+          </div>
+  
+          <h3>Senha</h3>
+          <div class="form-group">
+            <label class="form-group-label" for="register-password">Senha *</label>
+            <input type="password" name="register-password" id="register-password" placeholder="********" required>
+          </div>
+          <div class="form-group">
+            <label class="form-group-label" for="register-confirmation">Repetir senha *</label>
+            <input type="password" name="register-confirmation" id="register-confirmation" placeholder="********" required>
+          </div>
+          <aside class="password-politics">
+            <p>Política de senha segura *</p>
+            <p>A senha deve possuir, pelo menos:</p>
+            <ul>
+              <li>Um dígito numérico,</li>  
+              <li>Um caractere maiúsculo,</li>
+              <li>Um caractere minúsculo,</li>
+              <li>Um caractere especial (!@#$%^&*).</li>
+            </ul>
+          </aside>
+  
+          <button id="btn-continue" type="submit">Cadastrar</button>
+  
+          <p>Ao clicar em "Cadastrar", eu confirmo que li os 
+            <a href="#">Termos e Condições</a> e <a href="#">Política de Privacidade</a>.
+          </p>
+  
+        </form>
 
-        <p>Ao clicar em "Cadastrar", eu confirmo que li os 
-          <a href="#">Termos e Condições</a> e <a href="#">Política de Privacidade</a>.
-        </p>
+      </div>
 
-      </form>
-      <aside>
-        <p>Política de senha segura *</p>
-        <p>A senha deve possuir, pelo menos:</p>
-        <ul>
-          <li>Um dígito numérico,</li>  
-          <li>Um caractere maiúsculo,</li>
-          <li>Um caractere minúsculo,</li>
-          <li>Um caractere especial (!@#$%^&*).</li>
-        </ul>
-      </aside>
     </section>
 
   </main>

@@ -145,7 +145,7 @@ main {
   filter: brightness(85%);
 }
 
-/* Login - Register */
+/* Login */
 
 .login {
   color: var(--dark-color);
@@ -156,22 +156,19 @@ main {
   padding: 3rem 0;
 }
 
-.login h2,
-.register {
+.login h2 {
   font-size: 1.25rem;
   padding: 2rem 0 1rem;
   text-align: center;
   width: 100%;
 }
 
-.login a,
-.register a {
+.login a {
   color: var(--primary-color);
   font-style: italic;
 }
 
-.login > div,
-.register {
+.login > div {
   background-color: var(--primary-opacity);
   border: 2px solid var(--primary-opacity);
   border-radius: 5px;
@@ -182,23 +179,20 @@ main {
   padding-bottom: 2rem;
 }
 
-.login form,
-.register form {
+.login form {
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-start;
   margin-left: 10%;
 }
 
-.login form label,
-.register form label {
+.login form label {
   font-size: 1.1rem;
   line-height: 1.25rem;
   margin-bottom: 0.25rem;
 }
 
-.login form input,
-.register form input {
+.login form input {
   border: 2px solid var(--primary-color);
   border-radius: 4px;
   font-size: 1.25rem;
@@ -209,8 +203,7 @@ main {
   width: 90%;
 }
 
-.login button,
-.register button {
+.login button {
   background-color: var(--primary-color);
   border: 1px solid var(--primary-color);
   border-radius: 4px;
@@ -223,8 +216,7 @@ main {
   width: 90%;
 }
 
-.login button:hover,
-.register button:hover {
+.login button:hover {
   color: var(--secondary-color);
   filter: brightness(85%);
 }
@@ -233,25 +225,130 @@ main {
   font-size: 0.9rem;
 }
 
-.register > form p {
+/* Register */
+
+.register {
+  margin: 0 2.5%;
+  max-width: 900px;
+  width: 95%;
+}
+
+.register > h1 {
+  color: var(--dark-color);
+  margin: 2rem 0.5rem;
+}
+
+.register > .form-container {
+  background-color: var(--primary-opacity);
+  border: 2px solid var(--primary-opacity);
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.register form {
+  display: flex;
+  flex-direction: column;
+  color: var(--dark-color);
+}
+
+.register .form-group {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.register > form > .form-email {
+  align-self: center;
+  min-width: 300px;
+  width: 60%;
+}
+
+.form-email > label {
+  margin-right: 1rem;
+}
+
+.form-email > input,
+.form-group > input[type="text"],
+.form-group > input[type="password"] {
+  border: 2px solid var(--primary-color);
+  border-radius: 4px;
+  flex-grow: 1;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+  padding: 0.25rem 0 0.25rem 0.5rem;
+  outline: none;
+}
+.form-group input[type="radio"],
+.form-group > input[type="checkbox"] {
+  -webkit-transform: scale(1.25); /* Chrome, Safari, Opera */
+  transform: scale(1.25);
+}
+
+.form-group .form-group-label {
+  display: none;
+}
+.form-group > label[for="register-ie-na"] {
+  margin: 0 0.5rem;
+}
+.form-group .register-radio-span {
+  margin-left: 0.25rem;
+  margin-right: 1rem;
+}
+
+.form-group .input-error-msg {
+  color: red;
   font-size: 0.8rem;
-  width: 90%;
+  padding-bottom: 0.5rem;
+  width: 100%;
 }
 
-.register aside {
+.register form > p {
+  color: var(--dark-color);
+  font-size: 0.75rem;
+}
+
+.register form > p > a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.register form .password-politics {
   font-size: 0.9rem;
-  margin-left: 10%;
-  margin-top: 1rem;
+  margin: 0.5rem 0;
 }
-
-.register aside p:first-child {
+.register form .password-politics p:first-child {
   font-weight: bold;
 }
-
-.register aside ul {
-  list-style: none;
+.register form .password-politics li {
+  font-size: 0.9rem;
+  margin-left: 1rem;
 }
 
+#register-cep {
+  border-radius: 4px 0 0 4px;
+  margin-right: 0;
+}
+
+#busca-cep {
+  background-color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  border-radius: 0 4px 4px 0;
+  color: var(--light-color);
+  font-size: 1rem;
+  padding: 0.25rem;
+  margin-right: 0.5rem;
+}
+
+#btn-continue {
+  background-color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  color: var(--light-color);
+  cursor: pointer;
+  margin: 1rem 0 0.35rem;
+  padding: 0.5rem;
+  width: 97.5%;
+}
 
 /* Page Footer */
 
@@ -394,9 +491,31 @@ main {
     width: 0.5rem;
   }
 
-  /* Login - Register */
+  /* Login */
   .login {
     grid-template-columns: 1fr 1fr;
+  }
+
+  /* Register */
+  .register {
+    margin: 0 auto;
+  }
+  .form-group .form-group-label {
+    display: block;
+    width: 250px;
+  }
+  .form-group .input-error-msg,
+  .register form .password-politics {
+    margin-left: 250px;
+  }
+
+  #btn-continue {
+    align-self: center;
+    width: 66%;
+  }
+  .register form > p{
+    align-self: center;
+    width: 66%;
   }
 
   /* Page Footer */

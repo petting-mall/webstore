@@ -12,3 +12,11 @@ function nextImage () {
   }
   document.getElementById('radio' + counter).checked = true;
 }
+
+
+function onClickMenu(){
+  document.getElementById("menu").classList.toggle("change");
+  document.getElementById("menu-nav").classList.toggle("change");
+  document.getElementById("menu-bg").classList.toggle("change-bg");
+
+}

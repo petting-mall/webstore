@@ -7,13 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="./css/style.css" />
-  <title>Petting Mall</title>
+    <title>Petting Mall</title>
 </head>
 
 <body>
   <header>
     <nav class="navbar">
-      <img class="menu-icon" src="./img/menu-hamburger_icon.svg" alt="Ícone do menu" />
+
+      <!-- <img class="menu-icon" src="./img/menu-hamburger_icon.svg" alt="Ícone do menu" onclick="clickMenu()"/> -->
 
       <a href="#"><img class="logo-menu" src="./img/logo-petting-mall.png" alt="Logo da Petting Mall" /></a>
 
@@ -23,21 +24,33 @@
         <button class="search-button" type="submit">Buscar</button>
       </div>
 
+
       <div class="navbar-icons">
         <a href="#"><img src="./img/menu-login-icon.png" alt="Ícone de login" /></a>
         <a href="#"><img src="./img/menu-cart-icon.png" alt="Ícone do carrinho de compras" /></a>
       </div>
 
-      <ul class="menu-list">
-        <li><a href="#">Alimentação</a></li>
-        <li><a href="#">Acessórios</a></li>
-        <li><a href="#">Brinquedos</a></li>
-        <li><a href="#">Cama & Mesa & Banho</a></li>
-        <li><a href="#">Cosméticos</a></li>
-        <li><a href="#">Roupas</a></li>
-      </ul>
     </nav>
   </header>
+
+
+  <div id="menu-bar">
+    <div id="menu" onclick="onClickMenu()" >
+      <div id="bar1" class="bar"></div>
+      <div id="bar2" class="bar"></div>
+      <div id="bar3" class="bar"></div>
+    </div> 
+    <ul class="menu-nav" id="menu-nav">
+      <li><a href="#">Alimentação</a></li>
+      <li><a href="#">Acessórios</a></li>
+      <li><a href="#">Brinquedos</a></li>
+      <li><a href="#">Cama & Mesa & Banho</a></li>
+      <li><a href="#">Cosméticos</a></li>
+      <li><a href="#">Roupas</a></li>
+    </ul>
+  </div>
+
+  <div class="menu-bg" id="menu-bg"></div>
 
   <main>
     <section class="destaques">
@@ -182,65 +195,8 @@
       </div>
     </section>
     
-    <section class="marcas">
-      <h2>Marcas</h2>
-      <div class="marcas-container">
-
-        <div class="marcas-group">
-          <a href="#">
-            <img class="icon-marcas" src="./img/bawwaw.png" alt="Categoria Adoção" />
-            <p>Bawwaw</p>
-          </a>
-    
-          <a href="#">
-            <img class="icon-marcas" src="./img/granplus.png" alt="Categoria mais comprados" />
-            <p>Granplus</p>
-          </a>
-        </div>
-
-        <div class="marcas-group">
-          <a href="#">
-            <img class="icon-marcas" src="./img/pedigree.png" alt="Categoria Novidades" />
-            <p>Pedigree</p>
-          </a>
-    
-          <a href="#">
-            <img class="icon-marcas" src="./img/premier.png" alt="Categoria Recomendados" />
-            <p>Premier</p>
-          </a>
-        </div>
-
-        <div class="marcas-group">
-          <a href="#">
-            <img class="icon-marcas" src="./img/ND.png" alt="Categoria Brinquedos" />
-            <p>N&D</p>
-          </a>
-    
-          <a href="#">
-            <img class="icon-marcas" src="./img/dogchow.png" alt="Categoria Roupas" />
-            <p>Dogchow</p>
-          </a>
-        </div>
-
-        <div class="marcas-group">
-          <a href="#">
-            <img class="icon-marcas" src="./img/hills.png" alt="Categoria Cosméticos" />
-            <p>Hills</p>
-          </a>
-    
-          <a href="#">
-            <img class="icon-marcas" src="./img/purina.png" alt="Categoria Alimentação" />
-            <p>Purina</p>
-          </a>
-        </div>
-
-      </div>
-
-    </section>
-    
-
     <section class="categorias">
-      <h2>Categorias</h2>
+      <h2>Seções</h2>
       <div class="categorias-container">
 
         <div class="categorias-group">
@@ -296,115 +252,9 @@
 
   </main>
 
-
-  <section class="institutos">
-    <h2>Instituições verificadas</h2>
-      <h4>Adote um pet ou faça sua doação!</h4>
-    <div class="card-container">
-      <input type="radio" name="card-dot" id="card-one">
-      <input type="radio" name="card-dot" id="card-two">
-      <div class="main-card">
-
-        <div class="cards">
-          <div class="card">
-            <article class="content">
-              <a href="#">
-                <div class="card-img">
-                  <img src="./img/ong.png" alt="Instituto 1">
-                </div>
-                <div class="card-details">
-                  <p class="card-institute-name">Instituto 1</p>
-                  <p class="card-institute-section">Entrar em contato</p>
-                </div>
-              </a>
-            </article>
-          </div>
-          <div class="card">
-            <article class="content">
-              <a href="#">
-                <div class="card-img">
-                  <img src="./img/ong.png" alt="Instituto 2">
-                </div>
-                <div class="card-details">
-                  <p class="card-institute-name">Instituto 2</p>
-                  <p class="card-institute-section">Entrar em contato</p>
-                  
-                </div>
-              </a>
-            </article>
-          </div>
-          <div class="card">
-            <article class="content">
-              <a href="#">
-                <div class="card-img">
-                  <img src="./img/ong.png" alt="Instituto 3">
-                </div>
-                <div class="card-details">
-                  <p class="card-institute-name">Instituto 3</p>
-                  <p class="card-institute-section">Entrar em contato</p>
-                  
-                </div>
-              </a>
-            </article>
-          </div>
-        </div>
-
-        <div class="cards">
-          <div class="card">
-            <article class="content">
-              <a href="#">
-                <div class="card-img">
-                  <img src="./img/ong.png" alt="Instituto 4">
-                </div>
-                <div class="card-details">
-                  <p class="card-institute-name">Instituto 4</p>
-                  <p class="card-institute-section">Entrar em contato</p>
-                  
-                </div>
-              </a>
-            </article>
-          </div>
-          <div class="card">
-            <article class="content">
-              <a href="#">
-                <div class="card-img">
-                  <img src="./img/ong.png" alt="Instituto 5">
-                </div>
-                <div class="card-details">
-                  <p class="card-institute-name">Instituto 5</p>
-                  <p class="card-institute-section">Entrar em contato</p>
-                  
-                </div>
-              </a>
-            </article>
-          </div>
-          <div class="card">
-            <article class="content">
-              <a href="#">
-                <div class="card-img">
-                  <img src="./img/ong.png" alt="Instituto 6">
-                </div>
-                <div class="card-details">
-                  <p class="card-institute-name">Instituto 6</p>
-                  <p class="card-institute-section">Entrar em contato</p>
-                  
-                </div>
-              </a>
-            </article>
-          </div>
-        </div>
-      </div>
-      <div class="card-button">
-        <label for="card-one" class="card-btn1 card-btn-active"></label>
-        <label for="card-two" class="card-btn2"></label>
-      </div>
-    </div>
-  </section>
-
-
   <footer class="page-footer">
     <ul class="page-footer-flex">
-      <li>Categorias</li>
+      <li>Seções</li>
       <li><a href="#">Alimentação</a></li>
       <li><a href="#">Acessórios</a></li>
       <li><a href="#">Brinquedos</a></li>
@@ -447,8 +297,20 @@
       <p>Made with <span class="heart">♥</span> by Grupo5-fs_tn17</p>
     </div>
   </footer>
+  
+  <a href="#" class="back-to-top">➤</a>
 
   <script src="./js/index.js"></script>
+   <!-- <script>
+    function clickMenu() {
+      if (menulist.style.display == 'block'){
+        menulist.style.display = 'none'
+      }else{
+        menulist.style.display = 'block'
+      }
+
+    }
+  </script> -->
 </body>
 
 </html>

@@ -26,7 +26,7 @@ html {
 }
 
 body {
-  background-image: url('./img/background-image.jpeg');
+  background-image: url('../img/background-image.jpeg');
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -233,6 +233,13 @@ main {
   width: 95%;
 }
 
+.register .invisible {
+  display: none;
+}
+.register .visible-flex {
+  display: flex;
+}
+
 .register > h1 {
   color: var(--dark-color);
   margin: 2rem 0.5rem;
@@ -245,32 +252,44 @@ main {
   padding: 1rem;
 }
 
-.register form {
+.register .register-form {
   display: flex;
   flex-direction: column;
   color: var(--dark-color);
 }
 
-.register .form-group {
+.register .register-form h3 {
+  margin-top: 1rem;
+}
+
+.register .form-group-header {
   display: flex;
+  align-self: center;
+  margin: 0.5rem 0;
+  min-width: 300px;
+  width: 80%;
+}
+
+.register .form-group-header > label:first-child {
+  margin-right: 1rem;
+  width: 110px;
+}
+
+.register .form-group-header .register-radio-span {
+  margin-left: 0.25rem;
+  margin-right: 1rem;
+}
+
+.register .form-group {
+  /* display: flex; */
   flex-flow: row wrap;
   align-items: center;
   margin: 0.5rem 0;
 }
 
-.register > form > .form-email {
-  align-self: center;
-  min-width: 300px;
-  width: 60%;
-}
-
-.form-email > label {
-  margin-right: 1rem;
-}
-
-.form-email > input,
-.form-group > input[type="text"],
-.form-group > input[type="password"] {
+.register .form-group-header > input,
+.register .form-group > input[type="text"],
+.register .form-group > input[type="password"] {
   border: 2px solid var(--primary-color);
   border-radius: 4px;
   flex-grow: 1;
@@ -279,50 +298,49 @@ main {
   padding: 0.25rem 0 0.25rem 0.5rem;
   outline: none;
 }
-.form-group input[type="radio"],
-.form-group > input[type="checkbox"] {
+
+.register .form-group-header input[type="radio"],
+.register .form-group > input[type="checkbox"] {
   -webkit-transform: scale(1.25); /* Chrome, Safari, Opera */
   transform: scale(1.25);
 }
 
-.form-group .form-group-label {
+.register .form-group .form-group-label {
   display: none;
 }
-.form-group > label[for="register-ie-na"] {
+
+.register .form-group > label[for="register-ie-na"] {
   margin: 0 0.5rem;
 }
-.form-group .register-radio-span {
-  margin-left: 0.25rem;
-  margin-right: 1rem;
-}
 
-.form-group .input-error-msg {
+.register .form-group .blank-error-msg,
+.register .form-group .input-error-msg {
   color: red;
   font-size: 0.8rem;
   padding-bottom: 0.5rem;
   width: 100%;
 }
 
-.register form > p {
+.register-form > p {
   color: var(--dark-color);
   font-size: 0.75rem;
 }
 
-.register form > p > a {
+.register-form > p > a {
   color: var(--primary-color);
   text-decoration: none;
 }
 
-.register form .password-politics {
+.register-form .password-politics {
   font-size: 0.9rem;
-  margin: 0.5rem 0;
+  margin: 0.5rem;
 }
-.register form .password-politics p:first-child {
+.register-form .password-politics p:first-child {
   font-weight: bold;
 }
-.register form .password-politics li {
+.register-form .password-politics li {
   font-size: 0.9rem;
-  margin-left: 1rem;
+  margin-left: 1.25rem;
 }
 
 #register-cep {
@@ -340,7 +358,7 @@ main {
   margin-right: 0.5rem;
 }
 
-#btn-continue {
+#btn-register {
   background-color: var(--primary-color);
   border: 2px solid var(--primary-color);
   color: var(--light-color);
@@ -500,22 +518,22 @@ main {
   .register {
     margin: 0 auto;
   }
-  .form-group .form-group-label {
-    display: block;
+  .register .form-group .form-group-label {
+    display: inline-block;
+    padding-right: 1rem;
+    text-align: right;
     width: 250px;
   }
-  .form-group .input-error-msg,
-  .register form .password-politics {
+  .register .form-group .blank-error-msg,
+  .register .form-group .input-error-msg,
+  .register-form .password-politics {
     margin-left: 250px;
   }
 
-  #btn-continue {
+  .register-form > p,
+  #btn-register {
     align-self: center;
-    width: 66%;
-  }
-  .register form > p{
-    align-self: center;
-    width: 66%;
+    width: 400px;
   }
 
   /* Page Footer */

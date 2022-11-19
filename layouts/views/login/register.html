@@ -5,28 +5,55 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="login-register.css">
-  <script src="./login-register.js" defer></script>
+  <link rel="stylesheet" href="css/login-register.css">
+  <script src="js/validation.js" defer></script>
   <title>Cadastro</title>
 </head>
 
 <body>
+  <header>
+    <nav class="navbar">
+
+      <img class="menu-icon" src="./img/Hamburger_icon.svg" alt="Ícone do menu">
+
+      <a href="#"><img class="logo-menu" src="./img/logo-petting-mall.png" alt="Logo da Petting Mall"></a>
+
+      <div class="search-container">
+        <span><img class="search-icon" src="./img/magnifying-glass.svg" alt="Ícone de lupa"></span>
+        <input class="search-box" type="search" name="search" placeholder="Digite o nome do produto">
+        <button class="search-button" type="submit">Buscar</button>
+      </div>
+
+      <div class="navbar-icons">
+        <a href="#"><img src="./img/login-icon.png" alt="Ícone de login"></a>
+        <a href="#"><img src="./img/cart-icon.png" alt="Ícone do carrinho de compras"></a>
+      </div>
+
+      <ul class="menu-list">
+        <li><a href="#">Alimentação</a></li>
+        <li><a href="#">Acessórios</a></li>
+        <li><a href="#">Brinquedos</a></li>
+        <li><a href="#">Cama & Mesa & Banho</a></li>
+        <li><a href="#">Cosméticos</a></li>
+        <li><a href="#">Roupas</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <main>
-
     <!-- Register -->
     <section class="register">
       <h1>Realizar Cadastro</h1>
       <div class="form-container">
-        <form action="#" method="post">
-          <div class="form-group form-email">
+        <form action="#" class="register-form" method="post">
+          <div class="form-group-header">
             <label for="register-email">E-mail</label>
             <input type="email" name="register-email" id="register-email" value="teste@email.com" disabled>
           </div>
-          <div class="form-group">
+          <div class="form-group-header">
             <label class="form-group-label">Tipo de conta</label>
             <label for="register-type-pf">
-              <input type="radio" name="account-type" id="register-type-pf" value="type-pf">
+              <input type="radio" name="account-type" id="register-type-pf" value="type-pf" checked>
               <span class="register-radio-span">Pessoa Física</span>
             </label>
             <label for="register-type-pj">
@@ -35,105 +62,147 @@
             </label>
           </div>
           
-          <h3 class="form-item-pj">Dados da empresa</h3>
-          <div class="form-group form-item-pj">
+          <h3 class="form-item-pj invisible">Dados da empresa</h3>
+          <div class="form-group form-item-pj invisible">
             <label class="form-group-label" for="register-cnpj">CNPJ (apenas números)</label>
-            <input type="text" name="register-cnpj" id="register-cnpj" placeholder="CNPJ" required>
+            <input type="text" name="register-cnpj" id="register-cnpj" placeholder="CNPJ">
           </div>
-          <div class="form-group form-item-pj">
+          <div class="form-group form-item-pj invisible">
             <label class="form-group-label" for="register-company">Razão Social</label>
-            <input type="text" name="register-company" id="register-company" placeholder="Razão social da empresa" required>
+            <input type="text" name="register-company" id="register-company" placeholder="Razão social da empresa">
           </div>
-          <div class="form-group form-item-pj">
+          <div class="form-group form-item-pj invisible">
             <label class="form-group-label" for="register-ie">Inscrição Estadual</label>
-            <input type="text" name="register-ie" id="register-ie" placeholder="Insc. Estadual" required>
+            <input type="text" name="register-ie" id="register-ie" placeholder="Insc. Estadual" value="Isento" disabled>
             <input type="checkbox" name="register-ie-na" id="register-ie-na" checked>
             <label for="register-ie-na">Isento</label>
           </div>
   
           <h3>Dados Pessoais</h3>
-          <div class="form-group form-item-pf">
+          <div class="form-group form-item-pf visible-flex">
             <label class="form-group-label" for="register-cpf">CPF (apenas números)</label>
-            <input type="text" name="register-cpf" id="register-cpf" placeholder="Inserir CPF" required>
+            <input type="text" name="register-cpf" id="register-cpf" placeholder="Inserir CPF">
           </div>
-          <div class="form-group">
+          <div class="form-group visible-flex">
             <label class="form-group-label" for="register-name">Nome Completo</label>
-            <input type="text" name="register-name" id="register-name" placeholder="Inserir nome completo" required>
+            <input type="text" name="register-name" id="register-name" placeholder="Inserir nome completo">
           </div>
   
           <h3>Endereço</h3>
-          <div class="form-group">
+          <div class="form-group visible-flex">
             <label class="form-group-label" for="register-cep">CEP (apenas números)</label>
-            <input type="text" name="register-cep" id="register-cep" placeholder="Inserir CEP" required>
+            <input type="text" name="register-cep" id="register-cep" placeholder="Inserir CEP">
             <button id="busca-cep">Buscar</button>
           </div>
-          <div class="form-group form-address">
+          <div class="form-group form-address invisible">
             <label class="form-group-label" for="register-address">Endereço</label>
             <input type="text" name="register-address" id="register-address" placeholder="Inserir endereço">
           </div>
-          <div class="form-group form-address">
+          <div class="form-group form-address invisible">
             <label class="form-group-label" for="register-address-number">Número</label>
             <input type="text" name="register-address-number" id="register-address-number" placeholder="Inserir número ou S/N">
           </div>
-          <div class="form-group form-address">
+          <div class="form-group form-address invisible">
             <label class="form-group-label" for="register-address-extra">Complemento</label>
             <input type="text" name="register-address-extra" id="register-address-extra" placeholder="Inserir complemento">
           </div>
-          <div class="form-group form-address">
+          <div class="form-group form-address invisible">
             <label class="form-group-label" for="register-address-bairro">Bairro</label>
             <input type="text" name="register-address-bairro" id="register-address-bairro" placeholder="Inserir Bairro">
           </div>
-          <div class="form-group form-address">
+          <div class="form-group form-address invisible">
             <label class="form-group-label" for="register-address-city">Cidade</label>
             <input type="text" name="register-address-city" id="register-address-city" placeholder="Inserir Cidade">
           </div>
-          <div class="form-group form-address">
-            <label class="form-group-label" for="register-address-uf">Estado</label>
+          <div class="form-group form-address invisible">
+            <label class="form-group-label" for="register-address-uf">UF</label>
             <input type="text" name="register-address-uf" id="register-address-uf" placeholder="Inserir Estado">
           </div>
-          <div class="form-group form-address">
+          <div class="form-group form-address invisible">
             <label class="form-group-label" for="register-address-ref">Ponto de referência</label>
             <input type="text" name="register-address-ref" id="register-address-ref" placeholder="Inserir ponto de referência">
           </div>
-          <div class="form-group form-address">
+          <div class="form-group form-address invisible">
             <label class="form-group-label" for="register-phone">Telefone celular</label>
             <input type="text" name="register-phone" id="register-phone" placeholder="Inserir nº de telefone">
           </div>
   
           <h3>Senha</h3>
-          <div class="form-group">
+          <div class="form-group visible-flex">
             <label class="form-group-label" for="register-password">Senha *</label>
-            <input type="password" name="register-password" id="register-password" placeholder="********" required>
+            <input type="password" name="register-password" id="register-password" placeholder="********">
           </div>
-          <div class="form-group">
+          <div class="form-group visible-flex">
             <label class="form-group-label" for="register-confirmation">Repetir senha *</label>
-            <input type="password" name="register-confirmation" id="register-confirmation" placeholder="********" required>
+            <input type="password" name="register-confirmation" id="register-confirmation" placeholder="********">
           </div>
           <aside class="password-politics">
-            <p>Política de senha segura *</p>
-            <p>A senha deve possuir, pelo menos:</p>
+            <p>* Política de senha segura</p>
+            <p>A senha deve ter entre 8 e 60 caracteres e ser formada por, pelo menos:</p>
             <ul>
-              <li>Um dígito numérico,</li>  
+              <li>Um dígito numérico,</li> 
               <li>Um caractere maiúsculo,</li>
               <li>Um caractere minúsculo,</li>
               <li>Um caractere especial (!@#$%^&*).</li>
             </ul>
           </aside>
   
-          <button id="btn-continue" type="submit">Cadastrar</button>
+          <button id="btn-register" type="submit">Cadastrar</button>
   
           <p>Ao clicar em "Cadastrar", eu confirmo que li os 
             <a href="#">Termos e Condições</a> e <a href="#">Política de Privacidade</a>.
           </p>
-  
         </form>
-
       </div>
-
     </section>
-
   </main>
 
+  <footer class="page-footer">
+    <ul class="page-footer-flex">
+      <li>Seções</li>
+      <li><a href="#">Alimentação</a></li>
+      <li><a href="#">Acessórios</a></li>
+      <li><a href="#">Brinquedos</a></li>
+      <li><a href="#">Cama, Mesa, Banho</a></li>
+      <li><a href="#">Cosméticos</a></li>
+      <li><a href="#">Roupas</a></li>
+    </ul>
+
+    <ul class="page-footer-flex">
+      <li>Dúvidas</li>
+      <li><a href="#">Atendimento</a></li>
+      <li><a href="#">Ajuda online</a></li>
+      <li><a href="#">Políticas da empresa</a></li>
+    </ul>
+
+    <div class="adopt page-footer-flex">
+      <a href="#">Adote um Pet</a>
+      <img src="./img/adote-um-pet.png" alt="Logo da campanha 'Adote um Pet'">
+    </div>
+
+    <ul class="page-footer-flex">
+      <li>Institucional</li>
+      <li><a href="#">Sobre a Petting Mall</a></li>
+      <li><a href="#">Marcas Parceiras</a></li>
+      <li><a href="#">Campanhas</a></li>
+    </ul>
+
+    <div class="social-media page-footer-flex">
+      <p>Redes Sociais</p>
+      <a href="#"><img src="./img/vector-facebook.svg" alt="Logo do Facebook"></a>
+      <a href="#"><img src="./img/vector-instagram.svg" alt="Logo do Instagram"></a>
+      <a href="#"><img src="./img/vector-whatsapp.svg" alt="Logo do WhatsApp"></a>
+      <div class="logo-footer">
+        <a href="#"><img src="./img/logo-petting-mall.png" alt="Logo da Petting Mall"></a>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <p>Copyright© 2022 PettingMall - Todos os direitos reservados</p>
+      <p>Made with <span class="heart">♥</span> by Grupo5-fs_tn17</p>
+    </div>
+
+  </footer>
 </body>
 
 </html>

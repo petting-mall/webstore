@@ -1,0 +1,19 @@
+{
+  "name": "webstore",
+  "version": "1.0.0",
+  "description": "Petting Mall Webstore",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/petting-mall/webstore.git"
+  },
+  "author": "Grupo5-fs_tn17",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/petting-mall/webstore/issues"
+  },
+  "homepage": "https://github.com/petting-mall/webstore#readme"
+}

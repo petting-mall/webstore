@@ -5,11 +5,6 @@ function createErrorMsg(formField, className, message) {
   element.classList.add(className);
   element.innerText = message;
   formField.parentNode.appendChild(element);
-  // formField.insertAdjacentElement('afterend', element);
-}
-
-function findErrorMessages(input, querySelectorName) {
-  return input.parentNode.querySelectorAll(querySelectorName).length > 0;
 }
 
 function removeAllErrorMessages(querySelectorName) {
@@ -225,8 +220,8 @@ registerForm.addEventListener('submit', (event) => {
   // Check for blank inputs
   const inputFieldsToSubmit = document.querySelectorAll('.register-form .visible-flex input');
   inputFieldsToSubmit.forEach(input => {
-    if (!input.value.trim() && !findErrorMessages(input, '.input-error-msg')) {
-      // removeLocalErrorMessages(input, '.input-error-msg');
+    if (!input.value.trim()) {
+      removeLocalErrorMessages(input, '.input-error-msg');
       createErrorMsg(input, 'input-error-msg', 'O campo deve ser preenchido.');
       hasBlankInput = true;
     }

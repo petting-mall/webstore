@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/login-register.css">
+  <script src="js/loginValidation.js" defer></script>
   <title>Login</title>
 </head>
 
@@ -40,26 +41,26 @@
   </header>
 
   <main>
+    <!-- Login -->
     <section class="login">
-      <!-- Login -->
       <div>
         <h2>Já sou cliente Petting Mall</h2>
-        <form action="#" method="post">
+        <form action="#" id="login-form" method="post">
           <label for="login-email">E-mail</label>
-          <input type="email" name="login-email" id="login-email" autofocus placeholder="email@email.com.br" required>
+          <input type="email" name="login-email" id="login-email" autofocus placeholder="email@email.com.br">
           <label for="login-password">Senha</label>
-          <input type="password" name="login-password" id="login-password" placeholder="********" required>
+          <input type="password" name="login-password" id="login-password" placeholder="********">
           <button type="submit">Entrar</button>
           <a href="#">Esqueci minha senha</a>
         </form>
       </div>
 
-      <!-- Register -->
+      <!-- Register link -->
       <div>
         <h2>Quero me cadastrar</h2>
-        <form action="#" method="post">
+        <form action="#" id="to-register-form" method="post">
           <label for="register-email">E-mail para cadastro</label>
-          <input type="email" name="register-email" id="register-email" placeholder="email@email.com.br" required>
+          <input type="email" name="register-email" id="register-email" placeholder="email@email.com.br">
           <button type="submit">Continuar</button>
 
         </form>

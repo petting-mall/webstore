@@ -189,7 +189,7 @@ main {
 .login form label {
   font-size: 1.1rem;
   line-height: 1.25rem;
-  margin-bottom: 0.25rem;
+  margin: 1rem 0 0.25rem;
 }
 
 .login form input {
@@ -197,7 +197,6 @@ main {
   border-radius: 4px;
   font-size: 1.25rem;
   line-height: 2rem;
-  margin-bottom: 1rem;
   outline: none;
   padding-left: 0.5rem;
   width: 90%;
@@ -225,6 +224,13 @@ main {
   font-size: 0.9rem;
 }
 
+.login .input-error-msg {
+  color: red;
+  font-size: 0.8rem;
+  margin: 0.25rem 0 0.75rem;
+  width: 100%;
+}
+
 /* Register */
 
 .register {
@@ -242,7 +248,8 @@ main {
 
 .register > h1 {
   color: var(--dark-color);
-  margin: 2rem 0.5rem;
+  font-size: 1.5rem;
+  margin: 2rem 0.5rem 1rem;
 }
 
 .register > .form-container {
@@ -250,6 +257,7 @@ main {
   border: 2px solid var(--primary-opacity);
   border-radius: 5px;
   padding: 1rem;
+  margin-bottom: 2rem;
 }
 
 .register .register-form {
@@ -313,8 +321,7 @@ main {
   margin: 0 0.5rem;
 }
 
-.register .form-group .blank-error-msg,
-.register .form-group .input-error-msg {
+.register .input-error-msg {
   color: red;
   font-size: 0.8rem;
   padding-bottom: 0.5rem;
@@ -524,8 +531,7 @@ main {
     text-align: right;
     width: 250px;
   }
-  .register .form-group .blank-error-msg,
-  .register .form-group .input-error-msg,
+  .register .input-error-msg,
   .register-form .password-politics {
     margin-left: 250px;
   }

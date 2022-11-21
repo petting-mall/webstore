@@ -35,16 +35,19 @@ main {
   max-width: var(--max-screen-size);
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: var(--dark-color);
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   background-color: var(--light-color);
   width: 5px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
+
 ::-webkit-scrollbar-thumb {
   background-color: var(--primary-color);
   border-radius: 25px;
@@ -220,35 +223,43 @@ h1, h2, h3 {
   background-color: white;
 }
 
-#radio1:checked ~ .first-img {
+#radio1:checked~.first-img {
   margin-left: 0;
 }
-#radio2:checked ~ .first-img {
+
+#radio2:checked~.first-img {
   margin-left: -20%;
 }
-#radio3:checked ~ .first-img {
+
+#radio3:checked~.first-img {
   margin-left: -40%;
 }
-#radio4:checked ~ .first-img {
+
+#radio4:checked~.first-img {
   margin-left: -60%;
 }
-#radio5:checked ~ .first-img {
+
+#radio5:checked~.first-img {
   margin-left: -80%;
 }
 
-#radio1:checked ~ .carousel-navigation > .btn1 {
+#radio1:checked~.carousel-navigation>.btn1 {
   background-color: white;
 }
-#radio2:checked ~ .carousel-navigation > .btn2 {
+
+#radio2:checked~.carousel-navigation>.btn2 {
   background-color: white;
 }
-#radio3:checked ~ .carousel-navigation > .btn3 {
+
+#radio3:checked~.carousel-navigation>.btn3 {
   background-color: white;
 }
-#radio4:checked ~ .carousel-navigation > .btn4 {
+
+#radio4:checked~.carousel-navigation>.btn4 {
   background-color: white;
 }
-#radio5:checked ~ .carousel-navigation > .btn5 {
+
+#radio5:checked~.carousel-navigation>.btn5 {
   background-color: white;
 }
 
@@ -292,14 +303,14 @@ h1, h2, h3 {
   display: none;
 }
 
-.card-container > .main-card {
+.card-container>.main-card {
   display: flex;
   justify-content: space-evenly;
   width: 200%;
   transition: all 1s ease;
 }
 
-#card-two:checked ~ .main-card {
+#card-two:checked~.main-card {
   margin-left: -100%;
 }
 
@@ -393,14 +404,17 @@ h1, h2, h3 {
 .card-button label.card-btn-active {
   width: 2.5rem;
 }
-#card-one:checked ~ .card-button > .card-btn1,
-#card-two:checked ~ .card-button > .card-btn2 {
+
+#card-one:checked~.card-button>.card-btn1,
+#card-two:checked~.card-button>.card-btn2 {
   width: 2.5rem;
 }
-#card-two:checked ~ .card-button > .card-btn1 {
+
+#card-two:checked~.card-button>.card-btn1 {
   width: 1rem;
 }
-#card-one:checked ~ .card-button > .card-btn2 {
+
+#card-one:checked~.card-button>.card-btn2 {
   width: 1rem;
 }
 
@@ -430,6 +444,7 @@ h1, h2, h3 {
   text-decoration: none;
   transition: all 400ms ease;
 }
+
 .categorias-container a:hover {
   color: var(--stronger-yellow);
 }

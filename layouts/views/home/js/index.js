@@ -12,3 +12,22 @@ function nextImage () {
   }
   document.getElementById('radio' + counter).checked = true;
 }
+
+function clickMenu() {
+  if (menunav.style.display == 'block'){
+    menunav.style.display = 'none'
+    
+
+  }else{
+    menunav.style.display = 'block'
+
+  }
+
+}
+
+// function onClickMenu(){
+//   document.getElementById("menu").classList.toggle("change");
+//   document.getElementById("menunav").classList.toggle("change");
+//   document.getElementById("menu-bg").classList.toggle("change-bg");
+// }
+

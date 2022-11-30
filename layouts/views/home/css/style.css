@@ -74,6 +74,7 @@ h1, h2, h3 {
 }
 
 .logo-menu {
+
   max-width: auto;
   width: 45vw;
 }
@@ -570,20 +571,17 @@ h1, h2, h3 {
     width: calc(100% / 2 - 1rem)
   }
 
-
  /* Page Menu */
   .logo-menu{
     display: block;
     max-width: var(--max-width-media-queries) ;
   }
-
   .navbar {
     margin: 0 auto;
     padding: 1rem 2rem;
   }
 
   .menu-icon {
-    
     display:block;
   }
 
@@ -697,7 +695,6 @@ h1, h2, h3 {
     font-size: 1rem;
   }
 
-
   .menunav a {
     display: block;
     font-weight: bold;
@@ -760,6 +757,7 @@ h1, h2, h3 {
     position: relative;
     transition: all 300ms ease-in-out;
   }
+
   .menunav a:hover {
     color: var(--stronger-yellow);
   }
@@ -797,5 +795,9 @@ h1, h2, h3 {
   .copyright {
     grid-column: 1 / span 5;
     margin-top: -2rem;
+  }
+
+  .back-to-top {
+    display: none;
   }
 }

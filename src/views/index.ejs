@@ -2,143 +2,108 @@
   <main>
     <section class="destaques">
       <h1>Destaques da Semana</h1>
-      <div class="carousel">
-        <div class="carousel-slides">
-          <!-- Radio Buttons -->
-          <input type="radio" name="slides-btn" id="radio1">
-          <input type="radio" name="slides-btn" id="radio2">
-          <input type="radio" name="slides-btn" id="radio3">
-          <input type="radio" name="slides-btn" id="radio4">
-          <input type="radio" name="slides-btn" id="radio5">
-          <!-- Slide Images -->
-          <div class="slide-imgs first-img">
-            <img src="images/destaque1.jpeg" alt="Imagem destaque de cachorro">
-          </div>
-          <div class="slide-imgs">
-            <img src="images/destaque2.jpeg" alt="Imagem destaque cão e gato">
-          </div>
-          <div class="slide-imgs">
-            <img src="images/destaque3.jpeg" alt="Imagem destaque cachorro de coleira">
-          </div>
-          <div class="slide-imgs">
-            <img src="images/destaque4.jpeg" alt="Imagem destaque de gato">
-          </div>
-          <div class="slide-imgs">
-            <img src="images/destaque5.jpeg" alt="Imagem destaque cão e gato">
-          </div>
-          <!-- Carousel Navigation -->
-          <div class="carousel-navigation">
-            <label for="radio1" class="carousel-btn btn1"></label>
-            <label for="radio2" class="carousel-btn btn2"></label>
-            <label for="radio3" class="carousel-btn btn3"></label>
-            <label for="radio4" class="carousel-btn btn4"></label>
-            <label for="radio5" class="carousel-btn btn5"></label>
+      <div class="carousel-container">
+        <div class="carousel">
+          <div class="carousel-slider">
+            <a href="#"><img class="carousel-img" src="images/destaque_a.jpg" alt="Carousel image"></a>
+            <a href="#"><img class="carousel-img" src="images/destaque_b.jpg" alt="Carousel image"></a>
+            <a href="#"><img class="carousel-img" src="images/destaque_c.jpg" alt="Carousel image"></a>
+            <a href="#"><img class="carousel-img" src="images/destaque_d.jpg" alt="Carousel image"></a>
+            <a href="#"><img class="carousel-img" src="images/destaque_e.jpg" alt="Carousel image"></a>
           </div>
         </div>
+        <ul class="carousel-btn-container"></ul>
       </div>
     </section>
-    
+
     <section class="ofertas">
       <h2>Ofertas do dia</h2>
-      <div class="card-container">
-        <input type="radio" name="card-dot" id="card-one">
-        <input type="radio" name="card-dot" id="card-two">
-        <div class="main-card">
+      <div class="slide-container swiper">
+        <div class="slide-content">
+          <div class="card-wrapper swiper-wrapper">
 
-          <div class="cards">
-            <div class="card">
-              <article class="content">
-                <a href="#">
-                  <div class="card-img">
-                    <img src="images/oferta1.webp" alt="Coleira para cães">
-                  </div>
-                  <div class="card-details">
-                    <p class="card-product-name">Coleira para cães</p>
-                    <p class="card-product-section">Acessórios</p>
-                    <p class="card-product-price">R$ xxx,xx</p>
-                  </div>
+            <div class="card swiper-slide">
+              <div class="image-content">
+                <span class="overlay"></span>
+                <a href="#" class="card-image-link">
+                  <img src="images/oferta1.webp" alt="Card image" class="card-image" />
                 </a>
-              </article>
+              </div>
+              <a href="#" class="card-content">
+                <h3 class="card-product-name">Coleira para cães</h3>
+                <p class="card-product-section">Acessórios</p>
+                <p class="card-product-price">R$ xxx,xx</p>
+              </a>
             </div>
-            <div class="card">
-              <article class="content">
-                <a href="#">
-                  <div class="card-img">
-                    <img src="images/oferta2.webp" alt="Macaco de pelúcia">
-                  </div>
-                  <div class="card-details">
-                    <p class="card-product-name">Macaco de Pelúcia</p>
-                    <p class="card-product-section">Brinquedos</p>
-                    <p class="card-product-price">R$ xxx,xx</p>
-                  </div>
+            <div class="card swiper-slide">
+              <div class="image-content">
+                <span class="overlay"></span>
+                <a href="#" class="card-image-link">
+                  <img src="images/oferta2.webp" alt="Card image" class="card-image" />
                 </a>
-              </article>
+              </div>
+              <a href="#" class="card-content">
+                <h3 class="card-product-name">Macaco de Pelúcia</h3>
+                <p class="card-product-section">Brinquedos</p>
+                <p class="card-product-price">R$ xxx,xx</p>
+              </a>
             </div>
-            <div class="card">
-              <article class="content">
-                <a href="#">
-                  <div class="card-img">
-                    <img src="images/oferta3.webp" alt="Moletom com capuz">
-                  </div>
-                  <div class="card-details">
-                    <p class="card-product-name">Moletom com Capuz</p>
-                    <p class="card-product-section">Roupas</p>
-                    <p class="card-product-price">R$ xxx,xx</p>
-                  </div>
+            <div class="card swiper-slide">
+              <div class="image-content">
+                <span class="overlay"></span>
+                <a href="#" class="card-image-link">
+                  <img src="images/oferta3.webp" alt="Card image" class="card-image" />
                 </a>
-              </article>
+              </div>
+              <a href="#" class="card-content">
+                <h3 class="card-product-name">Moletom com Capuz</h3>
+                <p class="card-product-section">Roupas</p>
+                <p class="card-product-price">R$ xxx,xx</p>
+              </a>
             </div>
-          </div>
-
-          <div class="cards">
-            <div class="card">
-              <article class="content">
-                <a href="#">
-                  <div class="card-img">
-                    <img src="images/oferta4.webp" alt="Cama para gatos">
-                  </div>
-                  <div class="card-details">
-                    <p class="card-product-name">Cama Clássica</p>
-                    <p class="card-product-section">Cama, Mesa, Banho</p>
-                    <p class="card-product-price">R$ xxx,xx</p>
-                  </div>
+            <div class="card swiper-slide">
+              <div class="image-content">
+                <span class="overlay"></span>
+                <a href="#" class="card-image-link">
+                  <img src="images/oferta4.webp" alt="Card image" class="card-image" />
                 </a>
-              </article>
+              </div>
+              <a href="#" class="card-content">
+                <h3 class="card-product-name">Cama Clássica</h3>
+                <p class="card-product-section">Cama, Mesa, Banh</p>
+                <p class="card-product-price">R$ xxx,xx</p>
+              </a>
             </div>
-            <div class="card">
-              <article class="content">
-                <a href="#">
-                  <div class="card-img">
-                    <img src="images/oferta5.webp" alt="Bolsa para transporte">
-                  </div>
-                  <div class="card-details">
-                    <p class="card-product-name">Bolsa para Transporte</p>
-                    <p class="card-product-section">Acessórios</p>
-                    <p class="card-product-price">R$ xxx,xx</p>
-                  </div>
+            <div class="card swiper-slide">
+              <div class="image-content">
+                <span class="overlay"></span>
+                <a href="#" class="card-image-link">
+                  <img src="images/oferta5.webp" alt="Card image" class="card-image" />
                 </a>
-              </article>
+              </div>
+              <a href="#" class="card-content">
+                <h3 class="card-product-name">Bolsa para Transporte</h3>
+                <p class="card-product-section">Acessórios</p>
+                <p class="card-product-price">R$ xxx,xx</p>
+              </a>
             </div>
-            <div class="card">
-              <article class="content">
-                <a href="#">
-                  <div class="card-img">
-                    <img src="images/oferta6.webp" alt="Loção hidratante">
-                  </div>
-                  <div class="card-details">
-                    <p class="card-product-name">Hidratante para Coxins</p>
-                    <p class="card-product-section">Cosméticos</p>
-                    <p class="card-product-price">R$ xxx,xx</p>
-                  </div>
+            <div class="card swiper-slide">
+              <div class="image-content">
+                <span class="overlay"></span>
+                <a href="#" class="card-image-link">
+                  <img src="images/oferta6.webp" alt="Card image" class="card-image" />
                 </a>
-              </article>
+              </div>
+              <a href="#" class="card-content">
+                <h3 class="card-product-name">Hidratante para Coxins</h3>
+                <p class="card-product-section">Cosméticos</p>
+                <p class="card-product-price">R$ xxx,xx</p>
+              </a>
             </div>
           </div>
         </div>
-        <div class="card-button">
-          <label for="card-one" class="card-btn1 card-btn-active"></label>
-          <label for="card-two" class="card-btn2"></label>
-        </div>
+        <div class="swiper-button-next swiper-navBtn"></div>
+        <div class="swiper-button-prev swiper-navBtn"></div>
       </div>
     </section>
     

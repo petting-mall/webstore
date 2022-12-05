@@ -1,0 +1,237 @@
+/* Main (Home) */
+
+/* Destaques da Semana */
+.destaques {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem auto;
+  max-width: var(--max-screen-size);
+}
+.destaques h1 {
+  font-size: 1.8rem;
+  margin: 1rem;
+}
+/* Home Carousel */
+.carousel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem auto 0;
+  width: 100%;
+}
+.carousel {
+  width: 100%;
+}
+.carousel-slider {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2 / 1;
+}
+.carousel-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  z-index: 0;
+  transition: opacity 2s;
+}
+.carousel-btn-container {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  width: 60%;
+  position: relative;
+  bottom: 2rem;
+  z-index: 10;
+}
+.carousel-btn-container > li {
+  background-color: transparent;
+  border: 3px solid var(--primary-color);
+  border-radius: 50%;
+  bottom: 5rem;
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+  transition: all 500ms;
+}
+.carousel-btn-container > li > span {
+  visibility: hidden;
+}
+
+/* Ofertas */
+.ofertas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--primary-opacity);
+  margin: 2rem auto;
+  position: relative;
+  width: 100%;
+}
+.ofertas h2 {
+  font-size: 1.55rem;
+  padding-top: 1rem;
+  text-align: center;
+}
+.ofertas a {
+  text-decoration: none;
+}
+.slide-container {
+  margin: 1rem auto 3rem;
+  max-width: var(--max-screen-size);
+  padding: 1.5rem 0 2.5rem;
+  width: 100%;
+}
+.slide-content {
+  margin: 0 0.75rem;
+  overflow: hidden;
+  border-radius: 1.5rem;
+}
+.card {
+  background-color: var(--light-color);
+  border-radius: 2.5rem;
+}
+.image-content,
+.card-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.75rem 1rem;
+}
+.image-content{
+  position: relative;
+  row-gap: 5px;
+  padding: 1.5rem 0;
+}
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--primary-color);
+  border-radius: 1.5rem 1.5rem 0 1.5rem;
+}
+.overlay::before,
+.overlay::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -2.5rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: var(--primary-color);
+}
+.overlay::after {
+  border-radius: 0 1.5rem 0 0;
+  background-color: var(--light-color);
+}
+.card-image-link {
+  position: relative;
+  background: #fff;
+  border-radius: 25%;
+  height: 160px;
+  width: 160px;
+  padding: 3px;
+}
+.card-image-link .card-image {
+  border: 4px solid var(--primary-color);
+  border-radius: 25%;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.card-product-name {
+  color: var(--dark-color);
+  font-size: 1.25rem;
+}
+.card-product-section {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.card-product-price {
+  color: var(--dark-color);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Categorias */
+.categorias {
+  margin: 2rem auto 3rem;
+  max-width: var(--max-screen-size);
+}
+
+.categorias h2 {
+  text-align: center;
+}
+
+.categorias-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--categorias-min-size), 1fr));
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 0;
+  margin: 1rem auto 2rem;
+  width: 100%;
+}
+
+.categorias-container a {
+  color: var(--dark-color);
+  text-align: center;
+  text-decoration: none;
+  transition: all 400ms ease;
+}
+.categorias-container a:hover {
+  color: var(--stronger-yellow);
+}
+
+.categorias-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-around;
+}
+
+.categorias-group p {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.icon-categorias {
+  background: var(--secondary-opacity);
+  border: 3px solid var(--primary-color);
+  border-radius: 50%;
+  padding: 0.5rem;
+  max-width: 140px;
+  width: 75%;
+  transition: all 400ms ease;
+}
+
+.icon-categorias:hover {
+  filter: brightness(85%);
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 600px) {
+  /* Ofertas */
+  .main-card .cards .card {
+    margin: 1rem 0 0.5rem;
+    width: calc(100% / 2 - 1rem)
+  }
+}
+
+
+@media screen and (min-width: 769px) {
+  /* Home Carousel */
+  .carousel-btn-container {
+    bottom: 3rem;
+    width: 40%;
+  }
+  /* Ofertas */
+  .slide-content {
+    margin: 0 2.5rem;
+  }
+}

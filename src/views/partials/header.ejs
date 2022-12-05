@@ -5,9 +5,19 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+  <!-- CSS -->
   <link rel="stylesheet" href="stylesheets/style.css" />
-  <script src="javascripts/index.js" defer></script>
+  <% cssList.forEach(css => { %>
+    <link rel="stylesheet" href="stylesheets/<%= css %>" />
+  <% }) %>
+  <!-- Scripts -->
+  <% scriptList.forEach(script => { %>
+    <script src="javascripts/<%= script %>" defer></script>
+  <% }) %>
+  <% scriptModuleList.forEach(script => { %>
+    <script src="javascripts/<%= script %>" type="module" defer></script>
+  <% }) %>
   <title><%= title %> </title>
 </head>
 
@@ -28,7 +38,7 @@
         <a href="#"><img src="images/menu-cart-icon.png" alt="Ícone do carrinho de compras" /></a>
       </div>
 
-    <ul class="menunav" id="menunav">
+    <ul class="menu-nav">
       <li><a href="#">Alimentação</a></li>
       <li><a href="#">Acessórios</a></li>
       <li><a href="#">Brinquedos</a></li>
@@ -38,5 +48,4 @@
     </ul>
   
    </nav>
-  <!-- <div class="menu-bg" id="menu-bg"></div> -->
   </header>
